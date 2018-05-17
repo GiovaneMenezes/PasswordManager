@@ -23,6 +23,43 @@
 		25B7955C20ACC49D00E2A2CA /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7955B20ACC49D00E2A2CA /* UserType.swift */; };
 		25B7956120ACC5E200E2A2CA /* KeychainServerPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7956020ACC5E200E2A2CA /* KeychainServerPasswordItem.swift */; };
 		25B7956520ACC71B00E2A2CA /* KeychainServerPasswordItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7956420ACC71B00E2A2CA /* KeychainServerPasswordItemSpec.swift */; };
+		25B7957320ACDE0D00E2A2CA /* SceneTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7956E20ACDE0C00E2A2CA /* SceneTransitionType.swift */; };
+		25B7957420ACDE0D00E2A2CA /* Scene+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7956F20ACDE0C00E2A2CA /* Scene+ViewController.swift */; };
+		25B7957520ACDE0D00E2A2CA /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7957020ACDE0C00E2A2CA /* SceneCoordinator.swift */; };
+		25B7957620ACDE0D00E2A2CA /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7957120ACDE0D00E2A2CA /* SceneCoordinatorType.swift */; };
+		25B7957720ACDE0D00E2A2CA /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7957220ACDE0D00E2A2CA /* Scene.swift */; };
+		25B7957920ACDE4400E2A2CA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7957820ACDE4400E2A2CA /* SignUpViewController.swift */; };
+		25B7957B20ACDF2A00E2A2CA /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7957A20ACDF2A00E2A2CA /* BindableType.swift */; };
+		25B7957E20ACE03A00E2A2CA /* SignUpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7957D20ACE03A00E2A2CA /* SignUpData.swift */; };
+		25B7958320ACE08200E2A2CA /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7958020ACE08200E2A2CA /* ValidationError.swift */; };
+		25B7958420ACE08200E2A2CA /* ValidationRuleSet+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7958120ACE08200E2A2CA /* ValidationRuleSet+.swift */; };
+		25B7958520ACE08200E2A2CA /* ContainsSpecialCharPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7958220ACE08200E2A2CA /* ContainsSpecialCharPattern.swift */; };
+		25B7958720ACE0A400E2A2CA /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7958620ACE0A400E2A2CA /* String+Validation.swift */; };
+		25B7958D20ACE1F500E2A2CA /* BiometricAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7958920ACE1F500E2A2CA /* BiometricAuthViewModel.swift */; };
+		25B7958E20ACE1F500E2A2CA /* BiometricAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7958A20ACE1F500E2A2CA /* BiometricAuthViewController.swift */; };
+		25B7958F20ACE1F500E2A2CA /* BiometricAuth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B7958B20ACE1F500E2A2CA /* BiometricAuth.storyboard */; };
+		25B7959020ACE1F500E2A2CA /* BiometricAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7958C20ACE1F500E2A2CA /* BiometricAuthentication.swift */; };
+		25B7959620ACE22F00E2A2CA /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7959220ACE22F00E2A2CA /* SignInCoordinator.swift */; };
+		25B7959720ACE22F00E2A2CA /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B7959320ACE22F00E2A2CA /* SignIn.storyboard */; };
+		25B7959820ACE22F00E2A2CA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7959420ACE22F00E2A2CA /* SignInViewController.swift */; };
+		25B7959920ACE22F00E2A2CA /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7959520ACE22F00E2A2CA /* SignInViewModel.swift */; };
+		25B7959B20ACE26000E2A2CA /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7959A20ACE26000E2A2CA /* SignUpCoordinator.swift */; };
+		25B7959F20ACE29000E2A2CA /* UserDefaults+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7959D20ACE29000E2A2CA /* UserDefaults+Codable.swift */; };
+		25B795A020ACE29000E2A2CA /* UserDefaults+SessionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7959E20ACE29000E2A2CA /* UserDefaults+SessionType.swift */; };
+		25B795A220ACE2A900E2A2CA /* PrimitiveSequenceType+UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B795A120ACE2A900E2A2CA /* PrimitiveSequenceType+UserType.swift */; };
+		25B795A520ACE2D200E2A2CA /* Single+Completable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B795A420ACE2D200E2A2CA /* Single+Completable.swift */; };
+		25B795A720ACE2E100E2A2CA /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B795A620ACE2E100E2A2CA /* UIViewController+.swift */; };
+		25B795AB20ACE32400E2A2CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B795AA20ACE32400E2A2CA /* User.swift */; };
+		25B795AD20ACE4B500E2A2CA /* BiometricAuthHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B795AC20ACE4B500E2A2CA /* BiometricAuthHandlerType.swift */; };
+		25B795B020ACE54100E2A2CA /* SignInNetworkServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B795AE20ACE54100E2A2CA /* SignInNetworkServiceType.swift */; };
+		25B795B120ACE54100E2A2CA /* SignInCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B795AF20ACE54100E2A2CA /* SignInCoordinatorType.swift */; };
+		25B795B320ACE57900E2A2CA /* SignInDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B795B220ACE57900E2A2CA /* SignInDataType.swift */; };
+		25B795B520ACE61200E2A2CA /* SignInData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B795B420ACE61100E2A2CA /* SignInData.swift */; };
+		25B795B720ACE89200E2A2CA /* SignUpNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B795B620ACE89200E2A2CA /* SignUpNetworkService.swift */; };
+		25B795BA20ACE8C800E2A2CA /* CedroAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B795B920ACE8C800E2A2CA /* CedroAPI.swift */; };
+		25B795BC20ACE93A00E2A2CA /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B795BB20ACE93A00E2A2CA /* APIResponse.swift */; };
+		25B795BE20ACEE9A00E2A2CA /* SignInNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B795BD20ACEE9A00E2A2CA /* SignInNetworkService.swift */; };
+		25B795C120AD05DB00E2A2CA /* UINavigationController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B795C020AD05DB00E2A2CA /* UINavigationController+Rx.swift */; };
 		DD5A57047D2F707DD1A715E8 /* Pods_PasswordManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AD3405657510A4F05DE46C /* Pods_PasswordManagerUITests.framework */; };
 		E8BA01908DFFA7CEEE485141 /* Pods_PasswordManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B0BDD4E6C1D69DE88A199E /* Pods_PasswordManager.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +122,43 @@
 		25B7956320ACC71A00E2A2CA /* PasswordManagerTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PasswordManagerTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		25B7956420ACC71B00E2A2CA /* KeychainServerPasswordItemSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServerPasswordItemSpec.swift; sourceTree = "<group>"; };
 		25B7956820ACCF9000E2A2CA /* TestHost.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestHost.entitlements; sourceTree = "<group>"; };
+		25B7956E20ACDE0C00E2A2CA /* SceneTransitionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneTransitionType.swift; sourceTree = "<group>"; };
+		25B7956F20ACDE0C00E2A2CA /* Scene+ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scene+ViewController.swift"; sourceTree = "<group>"; };
+		25B7957020ACDE0C00E2A2CA /* SceneCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		25B7957120ACDE0D00E2A2CA /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
+		25B7957220ACDE0D00E2A2CA /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		25B7957820ACDE4400E2A2CA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		25B7957A20ACDF2A00E2A2CA /* BindableType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
+		25B7957D20ACE03A00E2A2CA /* SignUpData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpData.swift; sourceTree = "<group>"; };
+		25B7958020ACE08200E2A2CA /* ValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		25B7958120ACE08200E2A2CA /* ValidationRuleSet+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ValidationRuleSet+.swift"; sourceTree = "<group>"; };
+		25B7958220ACE08200E2A2CA /* ContainsSpecialCharPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainsSpecialCharPattern.swift; sourceTree = "<group>"; };
+		25B7958620ACE0A400E2A2CA /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
+		25B7958920ACE1F500E2A2CA /* BiometricAuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricAuthViewModel.swift; sourceTree = "<group>"; };
+		25B7958A20ACE1F500E2A2CA /* BiometricAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricAuthViewController.swift; sourceTree = "<group>"; };
+		25B7958B20ACE1F500E2A2CA /* BiometricAuth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BiometricAuth.storyboard; sourceTree = "<group>"; };
+		25B7958C20ACE1F500E2A2CA /* BiometricAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricAuthentication.swift; sourceTree = "<group>"; };
+		25B7959220ACE22F00E2A2CA /* SignInCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
+		25B7959320ACE22F00E2A2CA /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		25B7959420ACE22F00E2A2CA /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		25B7959520ACE22F00E2A2CA /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		25B7959A20ACE26000E2A2CA /* SignUpCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
+		25B7959D20ACE29000E2A2CA /* UserDefaults+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Codable.swift"; sourceTree = "<group>"; };
+		25B7959E20ACE29000E2A2CA /* UserDefaults+SessionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+SessionType.swift"; sourceTree = "<group>"; };
+		25B795A120ACE2A900E2A2CA /* PrimitiveSequenceType+UserType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PrimitiveSequenceType+UserType.swift"; sourceTree = "<group>"; };
+		25B795A420ACE2D200E2A2CA /* Single+Completable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Single+Completable.swift"; sourceTree = "<group>"; };
+		25B795A620ACE2E100E2A2CA /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		25B795AA20ACE32400E2A2CA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		25B795AC20ACE4B500E2A2CA /* BiometricAuthHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricAuthHandlerType.swift; sourceTree = "<group>"; };
+		25B795AE20ACE54100E2A2CA /* SignInNetworkServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInNetworkServiceType.swift; sourceTree = "<group>"; };
+		25B795AF20ACE54100E2A2CA /* SignInCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInCoordinatorType.swift; sourceTree = "<group>"; };
+		25B795B220ACE57900E2A2CA /* SignInDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataType.swift; sourceTree = "<group>"; };
+		25B795B420ACE61100E2A2CA /* SignInData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInData.swift; sourceTree = "<group>"; };
+		25B795B620ACE89200E2A2CA /* SignUpNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpNetworkService.swift; sourceTree = "<group>"; };
+		25B795B920ACE8C800E2A2CA /* CedroAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CedroAPI.swift; sourceTree = "<group>"; };
+		25B795BB20ACE93A00E2A2CA /* APIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		25B795BD20ACEE9A00E2A2CA /* SignInNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInNetworkService.swift; sourceTree = "<group>"; };
+		25B795C020AD05DB00E2A2CA /* UINavigationController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Rx.swift"; sourceTree = "<group>"; };
 		396B53E1E3DDA4AE5A2BEF54 /* Pods-TestHost.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestHost.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestHost/Pods-TestHost.release.xcconfig"; sourceTree = "<group>"; };
 		44AD3405657510A4F05DE46C /* Pods_PasswordManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PasswordManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B00254758255895244F3CD4 /* Pods-PasswordManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordManagerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PasswordManagerUITests/Pods-PasswordManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +245,7 @@
 		25B7951920ACBF1800E2A2CA /* PasswordManagerTests */ = {
 			isa = PBXGroup;
 			children = (
+				25B795BF20ACF23000E2A2CA /* ViewModels */,
 				25B7956220ACC6F200E2A2CA /* Keychain */,
 				25B7951C20ACBF1800E2A2CA /* Info.plist */,
 			);
@@ -200,8 +275,10 @@
 		25B7954920ACBFDD00E2A2CA /* App */ = {
 			isa = PBXGroup;
 			children = (
-				25B7954C20ACC00E00E2A2CA /* SignUp */,
 				25B7950520ACBF1700E2A2CA /* AppDelegate.swift */,
+				25B7959120ACE21C00E2A2CA /* SignIn */,
+				25B7954C20ACC00E00E2A2CA /* SignUp */,
+				25B7958820ACE1D300E2A2CA /* BiometricAuth */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -219,8 +296,13 @@
 		25B7954B20ACBFF700E2A2CA /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				25B795A920ACE30000E2A2CA /* Extensions */,
 				25B7955F20ACC5C300E2A2CA /* Keychain */,
+				25B7957C20ACE01300E2A2CA /* Models */,
+				25B7956D20ACDDF400E2A2CA /* Scenes */,
 				25B7955120ACC37E00E2A2CA /* Services */,
+				25B7959C20ACE27500E2A2CA /* Session */,
+				25B7957F20ACE05E00E2A2CA /* Validation */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -230,6 +312,7 @@
 			children = (
 				25B7954D20ACC01A00E2A2CA /* SignUp.storyboard */,
 				25B7954F20ACC22800E2A2CA /* SignUpViewModel.swift */,
+				25B7957820ACDE4400E2A2CA /* SignUpViewController.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -237,6 +320,9 @@
 		25B7955120ACC37E00E2A2CA /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				25B795B820ACE8AE00E2A2CA /* Network */,
+				25B7959A20ACE26000E2A2CA /* SignUpCoordinator.swift */,
+				25B7959220ACE22F00E2A2CA /* SignInCoordinator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -253,6 +339,9 @@
 		25B7955320ACC3A100E2A2CA /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				25B795AF20ACE54100E2A2CA /* SignInCoordinatorType.swift */,
+				25B795AE20ACE54100E2A2CA /* SignInNetworkServiceType.swift */,
+				25B795AC20ACE4B500E2A2CA /* BiometricAuthHandlerType.swift */,
 				25B7955420ACC3BE00E2A2CA /* SignUpCoordinatorType.swift */,
 			);
 			path = Services;
@@ -264,6 +353,7 @@
 				25B7955720ACC41300E2A2CA /* SessionType.swift */,
 				25B7955920ACC43900E2A2CA /* SignUpDataType.swift */,
 				25B7955B20ACC49D00E2A2CA /* UserType.swift */,
+				25B795B220ACE57900E2A2CA /* SignInDataType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -283,6 +373,107 @@
 				25B7956320ACC71A00E2A2CA /* PasswordManagerTests-Bridging-Header.h */,
 			);
 			path = Keychain;
+			sourceTree = "<group>";
+		};
+		25B7956D20ACDDF400E2A2CA /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				25B7957A20ACDF2A00E2A2CA /* BindableType.swift */,
+				25B7957220ACDE0D00E2A2CA /* Scene.swift */,
+				25B7956F20ACDE0C00E2A2CA /* Scene+ViewController.swift */,
+				25B7957020ACDE0C00E2A2CA /* SceneCoordinator.swift */,
+				25B7957120ACDE0D00E2A2CA /* SceneCoordinatorType.swift */,
+				25B7956E20ACDE0C00E2A2CA /* SceneTransitionType.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		25B7957C20ACE01300E2A2CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				25B795B420ACE61100E2A2CA /* SignInData.swift */,
+				25B795AA20ACE32400E2A2CA /* User.swift */,
+				25B7957D20ACE03A00E2A2CA /* SignUpData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		25B7957F20ACE05E00E2A2CA /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				25B7958220ACE08200E2A2CA /* ContainsSpecialCharPattern.swift */,
+				25B7958020ACE08200E2A2CA /* ValidationError.swift */,
+				25B7958120ACE08200E2A2CA /* ValidationRuleSet+.swift */,
+				25B7958620ACE0A400E2A2CA /* String+Validation.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		25B7958820ACE1D300E2A2CA /* BiometricAuth */ = {
+			isa = PBXGroup;
+			children = (
+				25B7958B20ACE1F500E2A2CA /* BiometricAuth.storyboard */,
+				25B7958C20ACE1F500E2A2CA /* BiometricAuthentication.swift */,
+				25B7958A20ACE1F500E2A2CA /* BiometricAuthViewController.swift */,
+				25B7958920ACE1F500E2A2CA /* BiometricAuthViewModel.swift */,
+			);
+			path = BiometricAuth;
+			sourceTree = "<group>";
+		};
+		25B7959120ACE21C00E2A2CA /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				25B7959320ACE22F00E2A2CA /* SignIn.storyboard */,
+				25B7959420ACE22F00E2A2CA /* SignInViewController.swift */,
+				25B7959520ACE22F00E2A2CA /* SignInViewModel.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		25B7959C20ACE27500E2A2CA /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				25B795A120ACE2A900E2A2CA /* PrimitiveSequenceType+UserType.swift */,
+				25B7959D20ACE29000E2A2CA /* UserDefaults+Codable.swift */,
+				25B7959E20ACE29000E2A2CA /* UserDefaults+SessionType.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		25B795A320ACE2B500E2A2CA /* Rx+ */ = {
+			isa = PBXGroup;
+			children = (
+				25B795C020AD05DB00E2A2CA /* UINavigationController+Rx.swift */,
+				25B795A420ACE2D200E2A2CA /* Single+Completable.swift */,
+			);
+			path = "Rx+";
+			sourceTree = "<group>";
+		};
+		25B795A920ACE30000E2A2CA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				25B795A320ACE2B500E2A2CA /* Rx+ */,
+				25B795A620ACE2E100E2A2CA /* UIViewController+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		25B795B820ACE8AE00E2A2CA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				25B795BD20ACEE9A00E2A2CA /* SignInNetworkService.swift */,
+				25B795BB20ACE93A00E2A2CA /* APIResponse.swift */,
+				25B795B920ACE8C800E2A2CA /* CedroAPI.swift */,
+				25B795B620ACE89200E2A2CA /* SignUpNetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		25B795BF20ACF23000E2A2CA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		4926E2FC44D1140A23F0A382 /* Pods */ = {
@@ -451,8 +642,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				25B7951020ACBF1800E2A2CA /* LaunchScreen.storyboard in Resources */,
+				25B7959720ACE22F00E2A2CA /* SignIn.storyboard in Resources */,
 				25B7950D20ACBF1800E2A2CA /* Assets.xcassets in Resources */,
 				25B7954E20ACC01A00E2A2CA /* SignUp.storyboard in Resources */,
+				25B7958F20ACE1F500E2A2CA /* BiometricAuth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,13 +815,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25B795AD20ACE4B500E2A2CA /* BiometricAuthHandlerType.swift in Sources */,
 				25B7955020ACC22800E2A2CA /* SignUpViewModel.swift in Sources */,
+				25B795A220ACE2A900E2A2CA /* PrimitiveSequenceType+UserType.swift in Sources */,
+				25B795A720ACE2E100E2A2CA /* UIViewController+.swift in Sources */,
+				25B7957520ACDE0D00E2A2CA /* SceneCoordinator.swift in Sources */,
+				25B795AB20ACE32400E2A2CA /* User.swift in Sources */,
+				25B795B720ACE89200E2A2CA /* SignUpNetworkService.swift in Sources */,
+				25B795B520ACE61200E2A2CA /* SignInData.swift in Sources */,
+				25B7958520ACE08200E2A2CA /* ContainsSpecialCharPattern.swift in Sources */,
 				25B7955A20ACC43900E2A2CA /* SignUpDataType.swift in Sources */,
 				25B7955C20ACC49D00E2A2CA /* UserType.swift in Sources */,
+				25B7957E20ACE03A00E2A2CA /* SignUpData.swift in Sources */,
+				25B7958320ACE08200E2A2CA /* ValidationError.swift in Sources */,
+				25B795BE20ACEE9A00E2A2CA /* SignInNetworkService.swift in Sources */,
+				25B795BC20ACE93A00E2A2CA /* APIResponse.swift in Sources */,
+				25B7957420ACDE0D00E2A2CA /* Scene+ViewController.swift in Sources */,
+				25B795B120ACE54100E2A2CA /* SignInCoordinatorType.swift in Sources */,
 				25B7956120ACC5E200E2A2CA /* KeychainServerPasswordItem.swift in Sources */,
+				25B7958E20ACE1F500E2A2CA /* BiometricAuthViewController.swift in Sources */,
+				25B795B320ACE57900E2A2CA /* SignInDataType.swift in Sources */,
 				25B7950620ACBF1700E2A2CA /* AppDelegate.swift in Sources */,
+				25B795A520ACE2D200E2A2CA /* Single+Completable.swift in Sources */,
+				25B7957620ACDE0D00E2A2CA /* SceneCoordinatorType.swift in Sources */,
+				25B7959B20ACE26000E2A2CA /* SignUpCoordinator.swift in Sources */,
+				25B7957720ACDE0D00E2A2CA /* Scene.swift in Sources */,
+				25B7958720ACE0A400E2A2CA /* String+Validation.swift in Sources */,
+				25B7959920ACE22F00E2A2CA /* SignInViewModel.swift in Sources */,
 				25B7955820ACC41300E2A2CA /* SessionType.swift in Sources */,
+				25B7957B20ACDF2A00E2A2CA /* BindableType.swift in Sources */,
+				25B7959620ACE22F00E2A2CA /* SignInCoordinator.swift in Sources */,
+				25B795B020ACE54100E2A2CA /* SignInNetworkServiceType.swift in Sources */,
+				25B795BA20ACE8C800E2A2CA /* CedroAPI.swift in Sources */,
+				25B7958420ACE08200E2A2CA /* ValidationRuleSet+.swift in Sources */,
 				25B7955520ACC3BE00E2A2CA /* SignUpCoordinatorType.swift in Sources */,
+				25B795A020ACE29000E2A2CA /* UserDefaults+SessionType.swift in Sources */,
+				25B7959020ACE1F500E2A2CA /* BiometricAuthentication.swift in Sources */,
+				25B7959F20ACE29000E2A2CA /* UserDefaults+Codable.swift in Sources */,
+				25B7959820ACE22F00E2A2CA /* SignInViewController.swift in Sources */,
+				25B7957920ACDE4400E2A2CA /* SignUpViewController.swift in Sources */,
+				25B795C120AD05DB00E2A2CA /* UINavigationController+Rx.swift in Sources */,
+				25B7957320ACDE0D00E2A2CA /* SceneTransitionType.swift in Sources */,
+				25B7958D20ACE1F500E2A2CA /* BiometricAuthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

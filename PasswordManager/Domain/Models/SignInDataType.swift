@@ -1,5 +1,5 @@
 //
-//  SignUpDataType.swift
+//  SignInDataType.swift
 //  PasswordManager
 //
 //  Created by Caio Sanchez Santos Costa on 16/05/18.
@@ -8,9 +8,8 @@
 
 import Foundation
 
-protocol SignUpDataType: Encodable {
+protocol SignInDataType: Encodable {
 
-    var name: String { get }
     var email: String { get }
     var password: String { get }
 

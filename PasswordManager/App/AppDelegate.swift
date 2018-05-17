@@ -7,16 +7,34 @@
 //
 
 import UIKit
+import NSObject_Rx
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let disposeBag = DisposeBag()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        let sceneCoordinator = SceneCoordinator(window: window!)
+        let signInCoordinator = SignInCoordinator(signInService: SignInNetworkService())
+        let signInViewModel = SignInViewModel(signInCoordinator: signInCoordinator, sceneCoordinator: sceneCoordinator)
+        let firstScene = Scene.signIn(signInViewModel)
+
+        sceneCoordinator.transition(to: firstScene, type: .root)
+        printRxResources()
         return true
+    }
+
+    func printRxResources() {
+        #if DEBUG
+        _ = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
+            .subscribe({ _ in
+                print("Resource count \(RxSwift.Resources.total)")
+            })
+        #endif
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
