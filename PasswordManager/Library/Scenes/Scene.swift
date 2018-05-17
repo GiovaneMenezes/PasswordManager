@@ -13,6 +13,6 @@ enum Scene {
     case signIn(SignInViewModel)
     case biometricAuth(BiometricAuthViewModel)
 //    case appLocked
-//    case credentials(CredentialsViewModel)
-//    case credentialDetails(EditCredentialViewModel)
+    case credentials(CredentialsViewModel)
+    case editCredential(EditCredentialViewModel)
 }

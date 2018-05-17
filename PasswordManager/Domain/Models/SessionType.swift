@@ -14,9 +14,10 @@ protocol SessionType {
     var apiToken: String? { get }
     var currentUser: UserType? { get }
     var isLoggedIn: Bool { get }
+    var isFirstLogin: Bool { get }
     func saveUser(_ user: UserType)
     func removeCurrentUser()
-    var isFirstLogin: Bool { get }
+    func setFirstLogin(value: Bool)
 }
 
 extension SessionType {

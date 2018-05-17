@@ -28,10 +28,7 @@ extension UserDefaults: SessionType {
 
     func saveUser(_ user: UserType) {
         store(user as! User, forKey: Keys.user.rawValue)
-        // save user email to check if its firtlogin
-        set(true, forKey: user.email)
     }
-
 
     func removeCurrentUser() {
         removeObject(forKey: Keys.user.rawValue)
@@ -40,6 +37,15 @@ extension UserDefaults: SessionType {
     var isFirstLogin: Bool {
         guard let email = currentUser?.email else { return true }
         return !bool(forKey: email)
+    }
+
+    func setFirstLogin(value: Bool) {
+        guard let email = currentUser?.email else { return }
+        if value {
+            removeObject(forKey: email)
+        } else {
+            set(true, forKey: email)
+        }
     }
     
 

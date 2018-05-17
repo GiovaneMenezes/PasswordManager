@@ -24,8 +24,11 @@ import UIKit
 
 extension Scene {
     func viewController() -> UIViewController {
+
         var storyboard: UIStoryboard
+
         switch self {
+
         case .signUp(let viewModel):
             storyboard = UIStoryboard(name: "SignUp", bundle: nil)
             let nc = storyboard.instantiateViewController(withIdentifier: "SignUp") as! UINavigationController
@@ -46,21 +49,20 @@ extension Scene {
             var vc = nc.viewControllers.first as! BiometricAuthViewController
             vc.bindViewModel(to: viewModel)
             return nc
-//        case .credentials(let viewModel):
-//            storyboard = UIStoryboard(name: "Credentials", bundle: nil)
-//            let nc = storyboard.instantiateViewController(withIdentifier: "Credentials") as! UINavigationController
-//            var vc = nc.viewControllers.first as! CredentialsViewController
-//            vc.bindViewModel(to: viewModel)
-//            return nc
-//
-//        case .credentialDetails(let viewModel):
-//            storyboard = UIStoryboard(name: "EditCredentials", bundle: nil)
-//            let nc = storyboard.instantiateViewController(withIdentifier: "EditCredential") as! UINavigationController
-//            var vc = nc.viewControllers.first as! EditCredentialViewController
-//            vc.bindViewModel(to: viewModel)
-//            return nc
-//        default:
-//            fatalError("Not implemented")
+
+        case .credentials(let viewModel):
+            storyboard = UIStoryboard(name: "Credentials", bundle: nil)
+            let nc = storyboard.instantiateViewController(withIdentifier: "Credentials") as! UINavigationController
+            var vc = nc.viewControllers.first as! CredentialsViewController
+            vc.bindViewModel(to: viewModel)
+            return nc
+
+        case .editCredential(let viewModel):
+            storyboard = UIStoryboard(name: "EditCredential", bundle: nil)
+            let nc = storyboard.instantiateViewController(withIdentifier: "EditCredential") as! UINavigationController
+            var vc = nc.viewControllers.first as! EditCredentialViewController
+            vc.bindViewModel(to: viewModel)
+            return nc
         }
     }
 }

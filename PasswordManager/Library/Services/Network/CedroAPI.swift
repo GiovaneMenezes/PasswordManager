@@ -24,7 +24,7 @@ extension CedroAPI: TargetType {
         case .signIn, .signUp:
             return URL(string: base)!
         case .logo(let siteUrl, _):
-            return URL(string: base + "/\(siteUrl)")!
+            return URL(string: base + "/logo/\(siteUrl)")!
         }
     }
 
@@ -73,7 +73,7 @@ extension CedroAPI: TargetType {
     var headers: [String : String]? {
         switch self {
         case .logo(_, let token):
-            return ["authorization": token]
+            return ["Authorization": token]
         default:
             return nil
         }

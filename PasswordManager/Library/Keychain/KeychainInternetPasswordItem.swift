@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct KeychainServerPasswordItem {
+struct KeychainInternetPasswordItem {
     // MARK: Types
     
     enum KeychainError: Error {
@@ -42,7 +42,7 @@ struct KeychainServerPasswordItem {
             Build a query to find the item that matches the server, account and
             access group.
         */
-        var query = KeychainServerPasswordItem.keychainQuery(withCreator: creator, server: server, account: account, accessGroup: accessGroup)
+        var query = KeychainInternetPasswordItem.keychainQuery(withCreator: creator, server: server, account: account, accessGroup: accessGroup)
         query[kSecMatchLimit as String] = kSecMatchLimitOne
         query[kSecReturnAttributes as String] = kCFBooleanTrue
         query[kSecReturnData as String] = kCFBooleanTrue
@@ -80,7 +80,7 @@ struct KeychainServerPasswordItem {
             var attributesToUpdate = [String : AnyObject]()
             attributesToUpdate[kSecValueData as String] = encodedPassword as AnyObject?
 
-            let query = KeychainServerPasswordItem.keychainQuery(withCreator: creator, server: server, account: account, accessGroup: accessGroup)
+            let query = KeychainInternetPasswordItem.keychainQuery(withCreator: creator, server: server, account: account, accessGroup: accessGroup)
             let status = SecItemUpdate(query as CFDictionary, attributesToUpdate as CFDictionary)
             
             // Throw an error if an unexpected status was returned.
@@ -91,7 +91,7 @@ struct KeychainServerPasswordItem {
                 No password was found in the keychain. Create a dictionary to save
                 as a new keychain item.
             */
-            var newItem = KeychainServerPasswordItem.keychainQuery(withCreator: creator, server: server, account: account, accessGroup: accessGroup)
+            var newItem = KeychainInternetPasswordItem.keychainQuery(withCreator: creator, server: server, account: account, accessGroup: accessGroup)
             newItem[kSecValueData as String] = encodedPassword as AnyObject?
             
             // Add a the new item to the keychain.
@@ -102,12 +102,13 @@ struct KeychainServerPasswordItem {
         }
     }
     
-    mutating func renameAccount(_ newAccountName: String) throws {
+    mutating func update(_ newServerName: String, _ newAccountName: String) throws {
         // Try to update an existing item with the new account name.
         var attributesToUpdate = [String : AnyObject]()
         attributesToUpdate[kSecAttrAccount as String] = newAccountName as AnyObject?
+        attributesToUpdate[kSecAttrServer as String] = newServerName as AnyObject?
         
-        let query = KeychainServerPasswordItem.keychainQuery(withCreator: creator, server: server, account: account, accessGroup: accessGroup)
+        let query = KeychainInternetPasswordItem.keychainQuery(withCreator: creator, server: server, account: account, accessGroup: accessGroup)
         let status = SecItemUpdate(query as CFDictionary, attributesToUpdate as CFDictionary)
         
         // Throw an error if an unexpected status was returned.
@@ -125,16 +126,19 @@ struct KeychainServerPasswordItem {
     
     func deleteItem() throws {
         // Delete the existing item from the keychain.
-        let query = KeychainServerPasswordItem.keychainQuery(withCreator: creator, server: server, account: account, accessGroup: accessGroup)
+        let query = KeychainInternetPasswordItem.keychainQuery(withCreator: creator, server: server, account: account, accessGroup: accessGroup)
         let status = SecItemDelete(query as CFDictionary)
         
         // Throw an error if an unexpected status was returned.
         guard status == noErr || status == errSecItemNotFound else { throw KeychainError.unhandledError(status: status) }
     }
     
-    static func passwordItems(forCreator creator: String, server: String? = nil, accessGroup: String? = nil) throws -> [KeychainServerPasswordItem] {
+    static func passwordItems(
+        forCreator creator: String,
+        server: String? = nil,
+        accessGroup: String? = nil) throws -> [KeychainInternetPasswordItem] {
         // Build a query for all items that match the server and access group.
-        var query = KeychainServerPasswordItem.keychainQuery(withCreator: creator, server: server, accessGroup: accessGroup)
+        var query = KeychainInternetPasswordItem.keychainQuery(withCreator: creator, server: server, accessGroup: accessGroup)
         query[kSecMatchLimit as String] = kSecMatchLimitAll
         query[kSecReturnAttributes as String] = kCFBooleanTrue
         query[kSecReturnData as String] = kCFBooleanFalse
@@ -155,7 +159,7 @@ struct KeychainServerPasswordItem {
         guard let resultData = queryResult as? [[String : AnyObject]] else { throw KeychainError.unexpectedItemData }
         
         // Create a `KeychainPasswordItem` for each dictionary in the query result.
-        var passwordItems = [KeychainServerPasswordItem]()
+        var passwordItems = [KeychainInternetPasswordItem]()
         for result in resultData {
             guard
                 let creator = result[kSecAttrCreator as String] as? String,
@@ -163,7 +167,7 @@ struct KeychainServerPasswordItem {
                 let server = result[kSecAttrServer as String] as? String
             else { throw KeychainError.unexpectedItemData }
             
-            let passwordItem = KeychainServerPasswordItem(server: server, account: account, creator: creator, accessGroup: accessGroup)
+            let passwordItem = KeychainInternetPasswordItem(server: server, account: account, creator: creator, accessGroup: accessGroup)
             passwordItems.append(passwordItem)
         }
         
@@ -193,8 +197,8 @@ struct KeychainServerPasswordItem {
     }
 }
 
-extension KeychainServerPasswordItem: Equatable {
-    static func ==(lhs: KeychainServerPasswordItem, rhs: KeychainServerPasswordItem) -> Bool {
+extension KeychainInternetPasswordItem: Equatable {
+    static func ==(lhs: KeychainInternetPasswordItem, rhs: KeychainInternetPasswordItem) -> Bool {
         return lhs.account == rhs.account && lhs.server == rhs.server && lhs.creator == rhs.creator
     }
 }

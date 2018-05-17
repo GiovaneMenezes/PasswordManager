@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Action
 
 class SignInViewController: UIViewController {
 
@@ -55,6 +56,18 @@ extension SignInViewController: BindableType {
         viewModel.isTextFieldsEnabled
             .drive(passwordTextField.rx.isEnabled)
             .disposed(by: rx.disposeBag)
+
+        viewModel.signInAction.errors
+            .subscribe(onNext: { [weak self] error in
+                self?.handleError(error)
+            })
+            .disposed(by: rx.disposeBag)
+    }
+
+    private func handleError(_ error: ActionError) {
+        if case .underlyingError(let error) = error {
+            showErrorAlert(with: error)
+        }
     }
 
 }

@@ -67,13 +67,13 @@ struct SignInViewModel {
                     if this.session.isFirstLogin  {
                         let viewModel = BiometricAuthViewModel(biometricAuthHandler: BiometricIDAuth(), sceneCoordinator: this.sceneCoordinator)
                         return this.sceneCoordinator
-                            .transition(to: .biometricAuth(viewModel), type: .root)
+                            .transition(to: .biometricAuth(viewModel), type: .rootAnimated)
                     }
-                    return Observable<Never>.empty().asCompletable()
 
-//                    let viewModel = CredentialsViewModel(storage: CredentialsStorage(), sceneCoordinator: this.sceneCoordinator)
-//                    return this.sceneCoordinator
-//                        .transition(to: .credentials(viewModel), type: .root)
+                    let viewModel = CredentialsViewModel(sceneCoordinator: this.sceneCoordinator)
+                    
+                    return this.sceneCoordinator
+                        .transition(to: .credentials(viewModel), type: .rootAnimated)
                 }
                 .map { _ in }
         }

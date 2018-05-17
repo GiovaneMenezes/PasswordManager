@@ -19,10 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         let sceneCoordinator = SceneCoordinator(window: window!)
-        let signInCoordinator = SignInCoordinator(signInService: SignInNetworkService())
-        let signInViewModel = SignInViewModel(signInCoordinator: signInCoordinator, sceneCoordinator: sceneCoordinator)
-        let firstScene = Scene.signIn(signInViewModel)
+        let isLoggedIn = UserDefaults.standard.isLoggedIn
+        var firstScene: Scene
+        if isLoggedIn {
+            let credentialsViewModel = CredentialsViewModel(sceneCoordinator: sceneCoordinator)
+            firstScene = Scene.credentials(credentialsViewModel)
+        } else {
 
+            let signInCoordinator = SignInCoordinator(signInService: SignInNetworkService())
+            let signInViewModel = SignInViewModel(signInCoordinator: signInCoordinator, sceneCoordinator: sceneCoordinator)
+            firstScene = Scene.signIn(signInViewModel)
+
+        }
         sceneCoordinator.transition(to: firstScene, type: .root)
         printRxResources()
         return true

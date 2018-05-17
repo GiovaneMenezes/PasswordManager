@@ -112,6 +112,7 @@ struct SignUpViewModel {
                     let viewModel = BiometricAuthViewModel(biometricAuthHandler: BiometricIDAuth(), sceneCoordinator: this.sceneCoordinator)
                     return this.sceneCoordinator.transition(to: Scene.biometricAuth(viewModel), type: .rootAnimated)
                 }
+                .asObservable()
                 .map { _ in }
         }
     }(self)
