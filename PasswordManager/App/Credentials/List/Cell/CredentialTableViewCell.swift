@@ -10,27 +10,14 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class SiteCredentialTableViewCell: UITableViewCell {
+class CredentialTableViewCell: UITableViewCell {
 
     static let reuseIdentifier = "PasswordCell"
+    private(set) var disposeBag = DisposeBag()
 
     @IBOutlet weak var siteLogoImageView: UIImageView!
     @IBOutlet weak var siteUrlLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
-    var viewModel: SiteCredentialCellViewModel! {
-        didSet {
-            bindViewModel()
-        }
-    }
-    var disposeBag = DisposeBag()
-
-    func bindViewModel() {
-        siteUrlLabel.text = viewModel.siteUrl
-        usernameLabel.text = viewModel.username
-        viewModel.logoImage
-            .drive(siteLogoImageView.rx.image)
-            .disposed(by: disposeBag)
-    }
 
     override func prepareForReuse() {
         super.prepareForReuse()

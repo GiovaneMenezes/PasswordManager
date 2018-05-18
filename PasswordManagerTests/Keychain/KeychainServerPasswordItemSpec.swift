@@ -16,21 +16,21 @@ class KeychainServerPasswordItemSpec: QuickSpec {
 
         describe("KeychainServerPasswordItem") {
 
-            var passwordItem = KeychainInternetPasswordItem(server: "www.wizards.org", account: "theGray", creator: "gandalf@wizard.com")
+            var passwordItem = KeychainPasswordItem(server: "www.wizards.org", account: "theGray", creator: "gandalf@wizard.com")
             let password = "sauronIsDead"
 
             afterEach {
-                try! KeychainInternetPasswordItem.deleteAll()
+                try! KeychainPasswordItem.deleteAll()
             }
 
             it("should save item") {
 
-                var savedItem: KeychainInternetPasswordItem?
+                var savedItem: KeychainPasswordItem?
                 var savedPassword: String?
                 do {
                     try passwordItem.savePassword(password)
-                    savedItem = try KeychainInternetPasswordItem
-                        .passwordItems(forCreator: passwordItem.creator, server: passwordItem.server).first
+                    savedItem = try KeychainPasswordItem
+                        .passwordItems(forCreator: passwordItem.creator, server: passwordItem.service).first
                     savedPassword = try savedItem!.readPassword()
                 } catch {
                     fail("Failed with error: \(error)")
@@ -39,15 +39,16 @@ class KeychainServerPasswordItemSpec: QuickSpec {
                 expect(password).to(equal(savedPassword))
             }
 
-            it("should rename account") {
+            it("should rename server and account") {
 
                 let newAccountName = "theWhite"
+                let newSeverName = "Gondor"
                 try! passwordItem.savePassword(password)
-                var savedItem: KeychainInternetPasswordItem?
+                var savedItem: KeychainPasswordItem?
                 do {
-                    try passwordItem.update(newAccountName, <#String#>)
-                    savedItem = try KeychainInternetPasswordItem
-                        .passwordItems(forCreator: passwordItem.creator, server: passwordItem.server).first
+                    try passwordItem.update(newSeverName, newAccountName)
+                    savedItem = try KeychainPasswordItem
+                        .passwordItems(forCreator: passwordItem.creator, server: passwordItem.service).first
                 } catch {
                     fail("Failed with error: \(error)")
                 }
@@ -56,11 +57,11 @@ class KeychainServerPasswordItemSpec: QuickSpec {
 
             it("should delete saved item") {
                 try! passwordItem.savePassword("12345")
-                var item: KeychainInternetPasswordItem?
+                var item: KeychainPasswordItem?
                 do {
                     try passwordItem.deleteItem()
-                    item = try KeychainInternetPasswordItem
-                        .passwordItems(forCreator: passwordItem.creator, server: passwordItem.server).first
+                    item = try KeychainPasswordItem
+                        .passwordItems(forCreator: passwordItem.creator, server: passwordItem.service).first
                 } catch {
                     fail("Failed with error: \(error)")
                 }

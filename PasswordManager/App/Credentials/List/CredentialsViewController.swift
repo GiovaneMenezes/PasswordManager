@@ -27,13 +27,17 @@ extension CredentialsViewController: BindableType {
 
     func bindViewModel() {
 
-        let passwords = viewModel.passwords
+        let credentials = viewModel.credentials
 
-        passwords.bind(to: tableView.rx.items(
-            cellIdentifier: SiteCredentialTableViewCell.reuseIdentifier,
-            cellType: SiteCredentialTableViewCell.self)) { row, element, cell in
-                let logoLoader = LogoNetworkService(token: UserDefaults.standard.currentToken!)
-                cell.viewModel = SiteCredentialCellViewModel(sitePassword: element, imageLoader: logoLoader)
+        credentials.bind(to: tableView.rx.items(
+            cellIdentifier: CredentialTableViewCell.reuseIdentifier,
+            cellType: CredentialTableViewCell.self)) { [weak self] row, element, cell in
+                cell.siteUrlLabel.text = element.service
+                cell.usernameLabel.text = element.account
+                self?.viewModel.logoLoader.loadImage(from: element.service)
+                    .asDriver(onErrorJustReturn: nil)
+                    .drive(cell.siteLogoImageView.rx.image)
+                    .disposed(by: cell.disposeBag)
             }
             .disposed(by: rx.disposeBag)
 

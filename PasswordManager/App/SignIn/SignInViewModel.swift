@@ -70,7 +70,7 @@ struct SignInViewModel {
                             .transition(to: .biometricAuth(viewModel), type: .rootAnimated)
                     }
 
-                    let viewModel = CredentialsViewModel(sceneCoordinator: this.sceneCoordinator)
+                    let viewModel = CredentialsViewModelFactory.create(sceneCoordinator: this.sceneCoordinator)
                     
                     return this.sceneCoordinator
                         .transition(to: .credentials(viewModel), type: .rootAnimated)

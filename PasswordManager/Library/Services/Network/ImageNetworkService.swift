@@ -10,19 +10,18 @@ import Foundation
 import Moya
 import RxSwift
 
-struct LogoNetworkService: ImageLoaderType {
+struct ImageNetworkService: ImageNetworkServiceType {
 
     let provider: MoyaProvider<CedroAPI>
-    let token: String
+    let session: SessionType
 
-    init(provider: MoyaProvider<CedroAPI> = MoyaProvider<CedroAPI>(), token: String) {
-        self.token = token
+    init(provider: MoyaProvider<CedroAPI> = MoyaProvider<CedroAPI>(), session: SessionType = UserDefaults.standard) {
         self.provider = provider
+        self.session = session
     }
 
     func loadImage(from url: String) -> Single<UIImage?> {
-        return provider.rx.request(.logo(url: url, token: token))
-            .debug()
+        return provider.rx.request(.logo(url: url, token: session.apiToken!))
             .mapImage()
     }
 }

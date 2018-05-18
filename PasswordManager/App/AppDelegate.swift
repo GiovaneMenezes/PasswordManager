@@ -22,10 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let isLoggedIn = UserDefaults.standard.isLoggedIn
         var firstScene: Scene
         if isLoggedIn {
-            let credentialsViewModel = CredentialsViewModel(sceneCoordinator: sceneCoordinator)
+            let credentialsViewModel = CredentialsViewModelFactory.create(sceneCoordinator: sceneCoordinator)
             firstScene = Scene.credentials(credentialsViewModel)
         } else {
-
             let signInCoordinator = SignInCoordinator(signInService: SignInNetworkService())
             let signInViewModel = SignInViewModel(signInCoordinator: signInCoordinator, sceneCoordinator: sceneCoordinator)
             firstScene = Scene.signIn(signInViewModel)

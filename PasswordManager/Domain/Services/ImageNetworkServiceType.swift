@@ -1,5 +1,5 @@
 //
-//  KeychainInternetPasswordItem+CredentialType.swift
+//  ImageNetworkServiceType.swift
 //  PasswordManager
 //
 //  Created by Caio Sanchez Santos Costa on 17/05/18.
@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import RxSwift
 
-extension KeychainPasswordItem: CredentialType {
-
-
+protocol ImageNetworkServiceType {
+    
+    func loadImage(from url: String) -> Single<UIImage?>
 }

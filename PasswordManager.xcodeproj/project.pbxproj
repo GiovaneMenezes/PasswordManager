@@ -12,16 +12,20 @@
 		25295CED20ADBE3C0022EB8C /* Credentials.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25295CEC20ADBE3C0022EB8C /* Credentials.storyboard */; };
 		25295CEF20ADBE440022EB8C /* CredentialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25295CEE20ADBE440022EB8C /* CredentialsViewController.swift */; };
 		25295CF120ADBE4A0022EB8C /* CredentialsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25295CF020ADBE4A0022EB8C /* CredentialsViewModel.swift */; };
-		25295CF520ADBE650022EB8C /* SiteCredentialCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25295CF320ADBE650022EB8C /* SiteCredentialCellViewModel.swift */; };
-		25295CF620ADBE650022EB8C /* SiteCredentialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25295CF420ADBE650022EB8C /* SiteCredentialTableViewCell.swift */; };
+		25295CF620ADBE650022EB8C /* CredentialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25295CF420ADBE650022EB8C /* CredentialTableViewCell.swift */; };
 		25295CF820ADBEA80022EB8C /* CredentialType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25295CF720ADBEA80022EB8C /* CredentialType.swift */; };
 		25295CFA20ADBED00022EB8C /* ImageLoaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25295CF920ADBED00022EB8C /* ImageLoaderType.swift */; };
-		25295CFE20ADBF350022EB8C /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25295CFD20ADBF350022EB8C /* Database.swift */; };
-		25295D0020ADC0E70022EB8C /* LogoNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25295CFF20ADC0E70022EB8C /* LogoNetworkService.swift */; };
+		25295D0020ADC0E70022EB8C /* ImageNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25295CFF20ADC0E70022EB8C /* ImageNetworkService.swift */; };
 		25295D0620ADC94A0022EB8C /* EditCredential.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25295D0520ADC94A0022EB8C /* EditCredential.storyboard */; };
 		25295D0920ADC9530022EB8C /* EditCredentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25295D0720ADC9530022EB8C /* EditCredentialViewController.swift */; };
 		25295D0A20ADC9530022EB8C /* EditCredentialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25295D0820ADC9530022EB8C /* EditCredentialViewModel.swift */; };
 		25295D1220ADEA070022EB8C /* KeychainInternetPasswordItem+CredentialType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25295D1120ADEA070022EB8C /* KeychainInternetPasswordItem+CredentialType.swift */; };
+		252CC42920AE269D00A2FB64 /* KeychainPasswordItem+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252CC42820AE269D00A2FB64 /* KeychainPasswordItem+Rx.swift */; };
+		252CC42B20AE40AE00A2FB64 /* SignUpNetworkServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252CC42A20AE40AE00A2FB64 /* SignUpNetworkServiceType.swift */; };
+		252CC42D20AE40EB00A2FB64 /* ImageNetworkServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252CC42C20AE40EB00A2FB64 /* ImageNetworkServiceType.swift */; };
+		252CC42F20AE42AD00A2FB64 /* LogoLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252CC42E20AE42AD00A2FB64 /* LogoLoader.swift */; };
+		252CC43220AE453200A2FB64 /* LogoLoaderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252CC43120AE453200A2FB64 /* LogoLoaderFactory.swift */; };
+		252CC43420AE46F100A2FB64 /* CredentialsViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252CC43320AE46F100A2FB64 /* CredentialsViewModelFactory.swift */; };
 		25B7950620ACBF1700E2A2CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7950520ACBF1700E2A2CA /* AppDelegate.swift */; };
 		25B7950D20ACBF1800E2A2CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25B7950C20ACBF1800E2A2CA /* Assets.xcassets */; };
 		25B7951020ACBF1800E2A2CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B7950E20ACBF1800E2A2CA /* LaunchScreen.storyboard */; };
@@ -34,7 +38,7 @@
 		25B7955820ACC41300E2A2CA /* SessionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7955720ACC41300E2A2CA /* SessionType.swift */; };
 		25B7955A20ACC43900E2A2CA /* SignUpDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7955920ACC43900E2A2CA /* SignUpDataType.swift */; };
 		25B7955C20ACC49D00E2A2CA /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7955B20ACC49D00E2A2CA /* UserType.swift */; };
-		25B7956120ACC5E200E2A2CA /* KeychainInternetPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7956020ACC5E200E2A2CA /* KeychainInternetPasswordItem.swift */; };
+		25B7956120ACC5E200E2A2CA /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7956020ACC5E200E2A2CA /* KeychainPasswordItem.swift */; };
 		25B7956520ACC71B00E2A2CA /* KeychainServerPasswordItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7956420ACC71B00E2A2CA /* KeychainServerPasswordItemSpec.swift */; };
 		25B7957320ACDE0D00E2A2CA /* SceneTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7956E20ACDE0C00E2A2CA /* SceneTransitionType.swift */; };
 		25B7957420ACDE0D00E2A2CA /* Scene+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7956F20ACDE0C00E2A2CA /* Scene+ViewController.swift */; };
@@ -120,16 +124,20 @@
 		25295CEC20ADBE3C0022EB8C /* Credentials.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Credentials.storyboard; sourceTree = "<group>"; };
 		25295CEE20ADBE440022EB8C /* CredentialsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsViewController.swift; sourceTree = "<group>"; };
 		25295CF020ADBE4A0022EB8C /* CredentialsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsViewModel.swift; sourceTree = "<group>"; };
-		25295CF320ADBE650022EB8C /* SiteCredentialCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiteCredentialCellViewModel.swift; sourceTree = "<group>"; };
-		25295CF420ADBE650022EB8C /* SiteCredentialTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiteCredentialTableViewCell.swift; sourceTree = "<group>"; };
+		25295CF420ADBE650022EB8C /* CredentialTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialTableViewCell.swift; sourceTree = "<group>"; };
 		25295CF720ADBEA80022EB8C /* CredentialType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialType.swift; sourceTree = "<group>"; };
 		25295CF920ADBED00022EB8C /* ImageLoaderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoaderType.swift; sourceTree = "<group>"; };
-		25295CFD20ADBF350022EB8C /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
-		25295CFF20ADC0E70022EB8C /* LogoNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoNetworkService.swift; sourceTree = "<group>"; };
+		25295CFF20ADC0E70022EB8C /* ImageNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageNetworkService.swift; sourceTree = "<group>"; };
 		25295D0520ADC94A0022EB8C /* EditCredential.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditCredential.storyboard; sourceTree = "<group>"; };
 		25295D0720ADC9530022EB8C /* EditCredentialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCredentialViewController.swift; sourceTree = "<group>"; };
 		25295D0820ADC9530022EB8C /* EditCredentialViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCredentialViewModel.swift; sourceTree = "<group>"; };
 		25295D1120ADEA070022EB8C /* KeychainInternetPasswordItem+CredentialType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeychainInternetPasswordItem+CredentialType.swift"; sourceTree = "<group>"; };
+		252CC42820AE269D00A2FB64 /* KeychainPasswordItem+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeychainPasswordItem+Rx.swift"; sourceTree = "<group>"; };
+		252CC42A20AE40AE00A2FB64 /* SignUpNetworkServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNetworkServiceType.swift; sourceTree = "<group>"; };
+		252CC42C20AE40EB00A2FB64 /* ImageNetworkServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNetworkServiceType.swift; sourceTree = "<group>"; };
+		252CC42E20AE42AD00A2FB64 /* LogoLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoLoader.swift; sourceTree = "<group>"; };
+		252CC43120AE453200A2FB64 /* LogoLoaderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoLoaderFactory.swift; sourceTree = "<group>"; };
+		252CC43320AE46F100A2FB64 /* CredentialsViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsViewModelFactory.swift; sourceTree = "<group>"; };
 		25B7950220ACBF1700E2A2CA /* PasswordManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25B7950520ACBF1700E2A2CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25B7950C20ACBF1800E2A2CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,7 +158,7 @@
 		25B7955720ACC41300E2A2CA /* SessionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionType.swift; sourceTree = "<group>"; };
 		25B7955920ACC43900E2A2CA /* SignUpDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDataType.swift; sourceTree = "<group>"; };
 		25B7955B20ACC49D00E2A2CA /* UserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserType.swift; sourceTree = "<group>"; };
-		25B7956020ACC5E200E2A2CA /* KeychainInternetPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainInternetPasswordItem.swift; sourceTree = "<group>"; };
+		25B7956020ACC5E200E2A2CA /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		25B7956320ACC71A00E2A2CA /* PasswordManagerTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PasswordManagerTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		25B7956420ACC71B00E2A2CA /* KeychainServerPasswordItemSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServerPasswordItemSpec.swift; sourceTree = "<group>"; };
 		25B7956820ACCF9000E2A2CA /* TestHost.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestHost.entitlements; sourceTree = "<group>"; };
@@ -268,8 +276,7 @@
 		25295CF220ADBE5A0022EB8C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				25295CF320ADBE650022EB8C /* SiteCredentialCellViewModel.swift */,
-				25295CF420ADBE650022EB8C /* SiteCredentialTableViewCell.swift */,
+				25295CF420ADBE650022EB8C /* CredentialTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -289,6 +296,15 @@
 				25295D0520ADC94A0022EB8C /* EditCredential.storyboard */,
 			);
 			path = Edit;
+			sourceTree = "<group>";
+		};
+		252CC43020AE451400A2FB64 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				252CC43120AE453200A2FB64 /* LogoLoaderFactory.swift */,
+				252CC43320AE46F100A2FB64 /* CredentialsViewModelFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		25B794F920ACBF1700E2A2CA = {
@@ -383,6 +399,7 @@
 		25B7954B20ACBFF700E2A2CA /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				252CC43020AE451400A2FB64 /* Factories */,
 				25B795A920ACE30000E2A2CA /* Extensions */,
 				25B7955F20ACC5C300E2A2CA /* Keychain */,
 				25B7957C20ACE01300E2A2CA /* Models */,
@@ -411,6 +428,7 @@
 				25B795B820ACE8AE00E2A2CA /* Network */,
 				25B7959A20ACE26000E2A2CA /* SignUpCoordinator.swift */,
 				25B7959220ACE22F00E2A2CA /* SignInCoordinator.swift */,
+				252CC42E20AE42AD00A2FB64 /* LogoLoader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -427,12 +445,13 @@
 		25B7955320ACC3A100E2A2CA /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				25295CFD20ADBF350022EB8C /* Database.swift */,
+				25B795AC20ACE4B500E2A2CA /* BiometricAuthHandlerType.swift */,
 				25295CF920ADBED00022EB8C /* ImageLoaderType.swift */,
+				252CC42C20AE40EB00A2FB64 /* ImageNetworkServiceType.swift */,
 				25B795AF20ACE54100E2A2CA /* SignInCoordinatorType.swift */,
 				25B795AE20ACE54100E2A2CA /* SignInNetworkServiceType.swift */,
-				25B795AC20ACE4B500E2A2CA /* BiometricAuthHandlerType.swift */,
 				25B7955420ACC3BE00E2A2CA /* SignUpCoordinatorType.swift */,
+				252CC42A20AE40AE00A2FB64 /* SignUpNetworkServiceType.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -452,7 +471,7 @@
 		25B7955F20ACC5C300E2A2CA /* Keychain */ = {
 			isa = PBXGroup;
 			children = (
-				25B7956020ACC5E200E2A2CA /* KeychainInternetPasswordItem.swift */,
+				25B7956020ACC5E200E2A2CA /* KeychainPasswordItem.swift */,
 			);
 			path = Keychain;
 			sourceTree = "<group>";
@@ -537,6 +556,7 @@
 			children = (
 				25B795C020AD05DB00E2A2CA /* UINavigationController+Rx.swift */,
 				25B795A420ACE2D200E2A2CA /* Single+Completable.swift */,
+				252CC42820AE269D00A2FB64 /* KeychainPasswordItem+Rx.swift */,
 			);
 			path = "Rx+";
 			sourceTree = "<group>";
@@ -553,7 +573,7 @@
 		25B795B820ACE8AE00E2A2CA /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				25295CFF20ADC0E70022EB8C /* LogoNetworkService.swift */,
+				25295CFF20ADC0E70022EB8C /* ImageNetworkService.swift */,
 				25B795BD20ACEE9A00E2A2CA /* SignInNetworkService.swift */,
 				25B795BB20ACE93A00E2A2CA /* APIResponse.swift */,
 				25B795B920ACE8C800E2A2CA /* CedroAPI.swift */,
@@ -938,11 +958,13 @@
 				25295D0920ADC9530022EB8C /* EditCredentialViewController.swift in Sources */,
 				25B795AB20ACE32400E2A2CA /* User.swift in Sources */,
 				25B795B720ACE89200E2A2CA /* SignUpNetworkService.swift in Sources */,
-				25295D0020ADC0E70022EB8C /* LogoNetworkService.swift in Sources */,
+				25295D0020ADC0E70022EB8C /* ImageNetworkService.swift in Sources */,
 				25B795B520ACE61200E2A2CA /* SignInData.swift in Sources */,
+				252CC43220AE453200A2FB64 /* LogoLoaderFactory.swift in Sources */,
 				25295D0A20ADC9530022EB8C /* EditCredentialViewModel.swift in Sources */,
+				252CC42B20AE40AE00A2FB64 /* SignUpNetworkServiceType.swift in Sources */,
 				25B7958520ACE08200E2A2CA /* ContainsSpecialCharPattern.swift in Sources */,
-				25295CF620ADBE650022EB8C /* SiteCredentialTableViewCell.swift in Sources */,
+				25295CF620ADBE650022EB8C /* CredentialTableViewCell.swift in Sources */,
 				25B7955A20ACC43900E2A2CA /* SignUpDataType.swift in Sources */,
 				25B7955C20ACC49D00E2A2CA /* UserType.swift in Sources */,
 				25B7957E20ACE03A00E2A2CA /* SignUpData.swift in Sources */,
@@ -953,15 +975,16 @@
 				25B795BC20ACE93A00E2A2CA /* APIResponse.swift in Sources */,
 				25B7957420ACDE0D00E2A2CA /* Scene+ViewController.swift in Sources */,
 				25295CF820ADBEA80022EB8C /* CredentialType.swift in Sources */,
+				252CC42D20AE40EB00A2FB64 /* ImageNetworkServiceType.swift in Sources */,
 				25295D1220ADEA070022EB8C /* KeychainInternetPasswordItem+CredentialType.swift in Sources */,
 				25B795B120ACE54100E2A2CA /* SignInCoordinatorType.swift in Sources */,
-				25B7956120ACC5E200E2A2CA /* KeychainInternetPasswordItem.swift in Sources */,
+				25B7956120ACC5E200E2A2CA /* KeychainPasswordItem.swift in Sources */,
 				25B7958E20ACE1F500E2A2CA /* BiometricAuthViewController.swift in Sources */,
+				252CC42920AE269D00A2FB64 /* KeychainPasswordItem+Rx.swift in Sources */,
 				25B795B320ACE57900E2A2CA /* SignInDataType.swift in Sources */,
 				25B7950620ACBF1700E2A2CA /* AppDelegate.swift in Sources */,
 				25B795A520ACE2D200E2A2CA /* Single+Completable.swift in Sources */,
 				25B7957620ACDE0D00E2A2CA /* SceneCoordinatorType.swift in Sources */,
-				25295CFE20ADBF350022EB8C /* Database.swift in Sources */,
 				25B7959B20ACE26000E2A2CA /* SignUpCoordinator.swift in Sources */,
 				25295CFA20ADBED00022EB8C /* ImageLoaderType.swift in Sources */,
 				25B7957720ACDE0D00E2A2CA /* Scene.swift in Sources */,
@@ -979,8 +1002,9 @@
 				25B7959F20ACE29000E2A2CA /* UserDefaults+Codable.swift in Sources */,
 				25B7959820ACE22F00E2A2CA /* SignInViewController.swift in Sources */,
 				25B7957920ACDE4400E2A2CA /* SignUpViewController.swift in Sources */,
+				252CC42F20AE42AD00A2FB64 /* LogoLoader.swift in Sources */,
+				252CC43420AE46F100A2FB64 /* CredentialsViewModelFactory.swift in Sources */,
 				25B795C120AD05DB00E2A2CA /* UINavigationController+Rx.swift in Sources */,
-				25295CF520ADBE650022EB8C /* SiteCredentialCellViewModel.swift in Sources */,
 				25B7957320ACDE0D00E2A2CA /* SceneTransitionType.swift in Sources */,
 				25B7958D20ACE1F500E2A2CA /* BiometricAuthViewModel.swift in Sources */,
 			);

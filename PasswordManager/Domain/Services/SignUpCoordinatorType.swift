@@ -17,10 +17,3 @@ protocol SignUpCoordinatorType {
     init(signUpService: SignUpNetworkServiceType, session: SessionType)
 
 }
-
-/// A type that is resposible for signing up an user in a backend service
-protocol SignUpNetworkServiceType {
-
-    func signUpUser(with data: SignUpDataType) -> Single<UserType>
-
-}

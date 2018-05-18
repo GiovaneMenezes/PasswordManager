@@ -8,9 +8,9 @@
 
 import Foundation
 
-protocol CredentialType: Storable {
+protocol CredentialType {
     var account: String { get }
-    var server: String { get }
+    var service: String { get }
     func readPassword() throws -> String
     func savePassword(_ password: String) throws
     func deleteItem() throws

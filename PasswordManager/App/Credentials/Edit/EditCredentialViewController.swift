@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class EditCredentialViewController: UITableViewController, BindableType {
+class EditCredentialViewController: UITableViewController {
 
     @IBOutlet weak var siteUrlTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
@@ -18,18 +18,16 @@ class EditCredentialViewController: UITableViewController, BindableType {
     @IBOutlet weak var saveBarButton: UIBarButtonItem!
     @IBOutlet weak var deleteCell: UITableViewCell!
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
+    @IBOutlet weak var deleteButton: UIButton!
     var viewModel: EditCredentialViewModel!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        bindViewModel()
-    }
+}
+
+extension EditCredentialViewController: BindableType {
 
     func bindViewModel() {
 
-        siteUrlTextField.text = viewModel.siteUrl
-        usernameTextField.text = viewModel.username
-        passwordTextField.text = viewModel.password
+        // MARK: Bind inputs
 
         siteUrlTextField.rx.text.orEmpty
             .bind(to: viewModel.siteUrlInput)
@@ -43,13 +41,18 @@ class EditCredentialViewController: UITableViewController, BindableType {
             .bind(to: viewModel.passwordInput)
             .disposed(by: rx.disposeBag)
 
+        cancelBarButton.rx.action = viewModel.onCancel()
+        deleteButton.rx.action = viewModel.deleteAction
+
+        siteUrlTextField.text = viewModel.siteUrl
+        usernameTextField.text = viewModel.username
+        passwordTextField.text = viewModel.password
+
         let inputs = Observable.combineLatest(
             siteUrlTextField.rx.text.orEmpty.asObservable(),
             usernameTextField.rx.text.orEmpty.asObservable(),
             passwordTextField.rx.text.orEmpty.asObservable()
         )
-
-        cancelBarButton.rx.action = viewModel.onCancel()
 
         saveBarButton.rx.tap
             .withLatestFrom(inputs)
@@ -64,12 +67,5 @@ class EditCredentialViewController: UITableViewController, BindableType {
         viewModel.isSaveButtonEnabled
             .drive(saveBarButton.rx.isEnabled)
             .disposed(by: rx.disposeBag)
-
-        tableView.rx.itemSelected
-            .filter { $0.section == 1 }
-            .withLatestFrom(viewModel.credential)
-            .bind(to: viewModel.deleteAction!.inputs)
-            .disposed(by: rx.disposeBag)
     }
-
 }

@@ -14,9 +14,10 @@ import RxCocoa
 struct EditCredentialViewModel {
 
     // MARK: Init
-    let saveAction: CompletableAction<(String, String, String)>
     let sceneCoordinator: SceneCoordinatorType
-    let deleteAction: CompletableAction<CredentialType>?
+    let saveAction: CompletableAction<(String, String, String)>
+    let deleteAction: CocoaAction?
+
     // MARK: Input
     var siteUrlInput = BehaviorSubject<String>(value: "")
     var usernameInput = BehaviorSubject<String>(value: "")
@@ -27,24 +28,19 @@ struct EditCredentialViewModel {
     var username: String = ""
     var password: String = ""
     var shouldShowDeleteButton: Driver<Bool>
-    // For deletion is ok
-    var credential: Observable<CredentialType>
-
     let isSaveButtonEnabled: Driver<Bool>
 
-    init(credential: CredentialType?, sceneCoordinator: SceneCoordinatorType, saveAction: CompletableAction<(String, String, String)>, deleteAction: CompletableAction<CredentialType>? = nil) {
+    init(credential: CredentialType?, sceneCoordinator: SceneCoordinatorType, saveAction: CompletableAction<(String, String, String)>, deleteAction: CocoaAction? = nil) {
         self.sceneCoordinator = sceneCoordinator
         self.saveAction = saveAction
         self.deleteAction = deleteAction
 
         if let credential = credential {
-            siteUrl = credential.server
+            siteUrl = credential.service
             username = credential.account
             password = (try? credential.readPassword()) ?? ""
-            self.credential = Observable.just(credential)
             shouldShowDeleteButton = Driver.just(true)
         } else {
-            self.credential = Observable.empty()
             shouldShowDeleteButton = Driver.just(false)
         }
 

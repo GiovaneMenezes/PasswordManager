@@ -34,7 +34,7 @@ struct BiometricAuthViewModel {
     lazy var onEvaluated: CompletableAction = { this in
         return CompletableAction {
             this.session.setFirstLogin(value: false)
-            let credentialsViewModel = CredentialsViewModel(sceneCoordinator: this.sceneCoordinator)
+            let credentialsViewModel = CredentialsViewModelFactory.create(sceneCoordinator: this.sceneCoordinator)
             return this.sceneCoordinator.transition(to: Scene.credentials(credentialsViewModel), type: .rootAnimated)
                 .asObservable()
 

@@ -16,19 +16,20 @@ struct CredentialsViewModel {
     // MARK: Init
     private let sceneCoordinator: SceneCoordinatorType
     private let session: SessionType
+    let logoLoader: ImageLoaderType
 
     // MARK: Input
 
     // MARK: Output
-    var passwords = BehaviorSubject<[CredentialType]>(value: [])
+    var credentials = BehaviorSubject<[CredentialType]>(value: [])
 
     // MARK: Properties
     private var currentUser: UserType {
         return session.currentUser!
     }
 
-
-    init(sceneCoordinator: SceneCoordinatorType, session: SessionType = UserDefaults.standard) {
+    init(sceneCoordinator: SceneCoordinatorType, logoLoader: ImageLoaderType, session: SessionType = UserDefaults.standard) {
+        self.logoLoader = logoLoader
         self.sceneCoordinator = sceneCoordinator
         self.session = session
         loadItems()
@@ -38,7 +39,7 @@ struct CredentialsViewModel {
         return Action { server, account, password in
             do {
                 let creator = self.currentUser.email
-                let item = KeychainInternetPasswordItem(server: server,account: account, creator: creator)
+                let item = KeychainPasswordItem(server: server,account: account, creator: creator)
                 try item.savePassword(password)
                 self.loadItems()
             } catch {
@@ -54,7 +55,7 @@ struct CredentialsViewModel {
         return Action { newServerName, newAccountName, password in
             do {
                 let creator = self.currentUser.email
-                var item = KeychainInternetPasswordItem(server: originalServerName, account: originalAccountName, creator: creator)
+                var item = KeychainPasswordItem(server: originalServerName, account: originalAccountName, creator: creator)
                 try item.update(newServerName, newAccountName)
                 self.loadItems()
             } catch {
@@ -64,15 +65,15 @@ struct CredentialsViewModel {
         }
     }
 
-    func deleteAction() -> CompletableAction<CredentialType> {
-        return CompletableAction { credential in
+    func deleteAction(credential: CredentialType) -> CocoaAction {
+        return CocoaAction {
             do {
                 try credential.deleteItem()
                 self.loadItems()
             } catch {
-                return Observable<Never>.error(error)
+                return Observable.error(error)
             }
-            return self.sceneCoordinator.pop().asObservable()
+            return self.sceneCoordinator.pop().asObservable().map { _ in }
         }
     }
 
@@ -87,15 +88,15 @@ struct CredentialsViewModel {
 
     lazy var editAction: CompletableAction<CredentialType> = { this in
         return CompletableAction { credential in
-            let credentialDetailsViewModel = EditCredentialViewModel(credential: credential, sceneCoordinator: this.sceneCoordinator, saveAction: this.onSaveExistingItem(credential.server, credential.account), deleteAction: this.deleteAction())
+            let credentialDetailsViewModel = EditCredentialViewModel(credential: credential, sceneCoordinator: this.sceneCoordinator, saveAction: this.onSaveExistingItem(credential.service, credential.account), deleteAction: this.deleteAction(credential: credential))
             return this.sceneCoordinator.transition(to: Scene.editCredential(credentialDetailsViewModel), type: .modal)
                 .asObservable()
         }
     }(self)
 
     private func loadItems() {
-        let items = try! KeychainInternetPasswordItem.passwordItems(forCreator: session.currentUser!.email)
-        passwords.onNext(items as [CredentialType])
+        let items = try! KeychainPasswordItem.passwordItems(forCreator: session.currentUser!.email)
+        credentials.onNext(items)
     }
 
 
