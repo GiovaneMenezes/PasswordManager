@@ -29,10 +29,15 @@
 		252CC43720AF067600A2FB64 /* AppLocked.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 252CC43620AF067600A2FB64 /* AppLocked.storyboard */; };
 		252CC43920AF067E00A2FB64 /* AppLockedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252CC43820AF067E00A2FB64 /* AppLockedViewController.swift */; };
 		252CC43B20AF07A800A2FB64 /* AppLockedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252CC43A20AF07A800A2FB64 /* AppLockedViewModel.swift */; };
+		255E996F20AF1E52007465B0 /* CredentialsViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255E996E20AF1E52007465B0 /* CredentialsViewModelSpec.swift */; };
+		255E997120AF1E65007465B0 /* EditCredentialViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255E997020AF1E65007465B0 /* EditCredentialViewModelSpec.swift */; };
+		255E997320AF1E77007465B0 /* SignInViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255E997220AF1E77007465B0 /* SignInViewModelSpec.swift */; };
+		255E997620AF22D6007465B0 /* MockImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255E997520AF22D6007465B0 /* MockImageLoader.swift */; };
+		255E997820AF2406007465B0 /* MockImageNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255E997720AF2406007465B0 /* MockImageNetworkService.swift */; };
+		255E997B20AF2550007465B0 /* seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255E997A20AF2550007465B0 /* seed.swift */; };
 		25B7950620ACBF1700E2A2CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7950520ACBF1700E2A2CA /* AppDelegate.swift */; };
 		25B7950D20ACBF1800E2A2CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25B7950C20ACBF1800E2A2CA /* Assets.xcassets */; };
 		25B7951020ACBF1800E2A2CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B7950E20ACBF1800E2A2CA /* LaunchScreen.storyboard */; };
-		25B7952620ACBF1800E2A2CA /* PasswordManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7952520ACBF1800E2A2CA /* PasswordManagerUITests.swift */; };
 		25B7953A20ACBF2900E2A2CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7953920ACBF2900E2A2CA /* AppDelegate.swift */; };
 		25B7954120ACBF2900E2A2CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25B7954020ACBF2900E2A2CA /* Assets.xcassets */; };
 		25B7954E20ACC01A00E2A2CA /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B7954D20ACC01A00E2A2CA /* SignUp.storyboard */; };
@@ -86,19 +91,11 @@
 		25B795CD20AD101E00E2A2CA /* UserDefaultsSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B795CB20AD101E00E2A2CA /* UserDefaultsSpecs.swift */; };
 		25B795D020AD10FB00E2A2CA /* MockSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B795CF20AD10FB00E2A2CA /* MockSceneCoordinator.swift */; };
 		25B795D220AD123C00E2A2CA /* MockSignUpNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B795D120AD123C00E2A2CA /* MockSignUpNetworkService.swift */; };
-		DD5A57047D2F707DD1A715E8 /* Pods_PasswordManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AD3405657510A4F05DE46C /* Pods_PasswordManagerUITests.framework */; };
 		E8BA01908DFFA7CEEE485141 /* Pods_PasswordManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B0BDD4E6C1D69DE88A199E /* Pods_PasswordManager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		25B7951720ACBF1800E2A2CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 25B794FA20ACBF1700E2A2CA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 25B7950120ACBF1700E2A2CA;
-			remoteInfo = PasswordManager;
-		};
-		25B7952220ACBF1800E2A2CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 25B794FA20ACBF1700E2A2CA /* Project object */;
 			proxyType = 1;
@@ -144,6 +141,12 @@
 		252CC43620AF067600A2FB64 /* AppLocked.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppLocked.storyboard; sourceTree = "<group>"; };
 		252CC43820AF067E00A2FB64 /* AppLockedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLockedViewController.swift; sourceTree = "<group>"; };
 		252CC43A20AF07A800A2FB64 /* AppLockedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLockedViewModel.swift; sourceTree = "<group>"; };
+		255E996E20AF1E52007465B0 /* CredentialsViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsViewModelSpec.swift; sourceTree = "<group>"; };
+		255E997020AF1E65007465B0 /* EditCredentialViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCredentialViewModelSpec.swift; sourceTree = "<group>"; };
+		255E997220AF1E77007465B0 /* SignInViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModelSpec.swift; sourceTree = "<group>"; };
+		255E997520AF22D6007465B0 /* MockImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageLoader.swift; sourceTree = "<group>"; };
+		255E997720AF2406007465B0 /* MockImageNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageNetworkService.swift; sourceTree = "<group>"; };
+		255E997A20AF2550007465B0 /* seed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seed.swift; sourceTree = "<group>"; };
 		25B7950220ACBF1700E2A2CA /* PasswordManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25B7950520ACBF1700E2A2CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25B7950C20ACBF1800E2A2CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,9 +154,6 @@
 		25B7951120ACBF1800E2A2CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25B7951620ACBF1800E2A2CA /* PasswordManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25B7951C20ACBF1800E2A2CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25B7952120ACBF1800E2A2CA /* PasswordManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		25B7952520ACBF1800E2A2CA /* PasswordManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordManagerUITests.swift; sourceTree = "<group>"; };
-		25B7952720ACBF1800E2A2CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25B7953720ACBF2900E2A2CA /* TestHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25B7953920ACBF2900E2A2CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25B7954020ACBF2900E2A2CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -240,14 +240,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25B7951E20ACBF1800E2A2CA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD5A57047D2F707DD1A715E8 /* Pods_PasswordManagerUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		25B7953420ACBF2900E2A2CA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -323,12 +315,19 @@
 			path = "App Locked";
 			sourceTree = "<group>";
 		};
+		255E997920AF2542007465B0 /* Seed */ = {
+			isa = PBXGroup;
+			children = (
+				255E997A20AF2550007465B0 /* seed.swift */,
+			);
+			path = Seed;
+			sourceTree = "<group>";
+		};
 		25B794F920ACBF1700E2A2CA = {
 			isa = PBXGroup;
 			children = (
 				25B7950420ACBF1700E2A2CA /* PasswordManager */,
 				25B7951920ACBF1800E2A2CA /* PasswordManagerTests */,
-				25B7952420ACBF1800E2A2CA /* PasswordManagerUITests */,
 				25B7953820ACBF2900E2A2CA /* TestHost */,
 				25B7950320ACBF1700E2A2CA /* Products */,
 				4926E2FC44D1140A23F0A382 /* Pods */,
@@ -341,7 +340,6 @@
 			children = (
 				25B7950220ACBF1700E2A2CA /* PasswordManager.app */,
 				25B7951620ACBF1800E2A2CA /* PasswordManagerTests.xctest */,
-				25B7952120ACBF1800E2A2CA /* PasswordManagerUITests.xctest */,
 				25B7953720ACBF2900E2A2CA /* TestHost.app */,
 			);
 			name = Products;
@@ -361,6 +359,7 @@
 		25B7951920ACBF1800E2A2CA /* PasswordManagerTests */ = {
 			isa = PBXGroup;
 			children = (
+				255E997920AF2542007465B0 /* Seed */,
 				25B795CE20AD10C300E2A2CA /* Session */,
 				25B795C920AD101E00E2A2CA /* Mocks */,
 				25B795BF20ACF23000E2A2CA /* ViewModels */,
@@ -368,15 +367,6 @@
 				25B7951C20ACBF1800E2A2CA /* Info.plist */,
 			);
 			path = PasswordManagerTests;
-			sourceTree = "<group>";
-		};
-		25B7952420ACBF1800E2A2CA /* PasswordManagerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				25B7952520ACBF1800E2A2CA /* PasswordManagerUITests.swift */,
-				25B7952720ACBF1800E2A2CA /* Info.plist */,
-			);
-			path = PasswordManagerUITests;
 			sourceTree = "<group>";
 		};
 		25B7953820ACBF2900E2A2CA /* TestHost */ = {
@@ -603,6 +593,9 @@
 			isa = PBXGroup;
 			children = (
 				25B795C420AD0DEC00E2A2CA /* SignUpViewModelSpec.swift */,
+				255E996E20AF1E52007465B0 /* CredentialsViewModelSpec.swift */,
+				255E997020AF1E65007465B0 /* EditCredentialViewModelSpec.swift */,
+				255E997220AF1E77007465B0 /* SignInViewModelSpec.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -614,6 +607,8 @@
 				25B795CA20AD101E00E2A2CA /* MockUserDefaults.swift */,
 				25B795CF20AD10FB00E2A2CA /* MockSceneCoordinator.swift */,
 				25B795D120AD123C00E2A2CA /* MockSignUpNetworkService.swift */,
+				255E997520AF22D6007465B0 /* MockImageLoader.swift */,
+				255E997720AF2406007465B0 /* MockImageNetworkService.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -695,25 +690,6 @@
 			productReference = 25B7951620ACBF1800E2A2CA /* PasswordManagerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		25B7952020ACBF1800E2A2CA /* PasswordManagerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 25B7953020ACBF1800E2A2CA /* Build configuration list for PBXNativeTarget "PasswordManagerUITests" */;
-			buildPhases = (
-				6547E3D7391467A564AA5E19 /* [CP] Check Pods Manifest.lock */,
-				25B7951D20ACBF1800E2A2CA /* Sources */,
-				25B7951E20ACBF1800E2A2CA /* Frameworks */,
-				25B7951F20ACBF1800E2A2CA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				25B7952320ACBF1800E2A2CA /* PBXTargetDependency */,
-			);
-			name = PasswordManagerUITests;
-			productName = PasswordManagerUITests;
-			productReference = 25B7952120ACBF1800E2A2CA /* PasswordManagerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		25B7953620ACBF2900E2A2CA /* TestHost */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25B7954620ACBF2900E2A2CA /* Build configuration list for PBXNativeTarget "TestHost" */;
@@ -751,10 +727,6 @@
 						LastSwiftMigration = 0930;
 						TestTargetID = 25B7950120ACBF1700E2A2CA;
 					};
-					25B7952020ACBF1800E2A2CA = {
-						CreatedOnToolsVersion = 9.3.1;
-						TestTargetID = 25B7950120ACBF1700E2A2CA;
-					};
 					25B7953620ACBF2900E2A2CA = {
 						CreatedOnToolsVersion = 9.3.1;
 						SystemCapabilities = {
@@ -780,7 +752,6 @@
 			targets = (
 				25B7950120ACBF1700E2A2CA /* PasswordManager */,
 				25B7951520ACBF1800E2A2CA /* PasswordManagerTests */,
-				25B7952020ACBF1800E2A2CA /* PasswordManagerUITests */,
 				25B7953620ACBF2900E2A2CA /* TestHost */,
 			);
 		};
@@ -809,13 +780,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25B7951F20ACBF1800E2A2CA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		25B7953520ACBF2900E2A2CA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -827,24 +791,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6547E3D7391467A564AA5E19 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PasswordManagerUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9F56FCA78DF3B262ECF02C31 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1034,21 +980,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				255E997820AF2406007465B0 /* MockImageNetworkService.swift in Sources */,
+				255E997120AF1E65007465B0 /* EditCredentialViewModelSpec.swift in Sources */,
+				255E997B20AF2550007465B0 /* seed.swift in Sources */,
 				25B795D220AD123C00E2A2CA /* MockSignUpNetworkService.swift in Sources */,
 				25B795CD20AD101E00E2A2CA /* UserDefaultsSpecs.swift in Sources */,
 				25B7956520ACC71B00E2A2CA /* KeychainServerPasswordItemSpec.swift in Sources */,
 				25B795C720AD0F3600E2A2CA /* MockSignUpCoordinator.swift in Sources */,
+				255E997620AF22D6007465B0 /* MockImageLoader.swift in Sources */,
+				255E997320AF1E77007465B0 /* SignInViewModelSpec.swift in Sources */,
 				25B795D020AD10FB00E2A2CA /* MockSceneCoordinator.swift in Sources */,
 				25B795CC20AD101E00E2A2CA /* MockUserDefaults.swift in Sources */,
+				255E996F20AF1E52007465B0 /* CredentialsViewModelSpec.swift in Sources */,
 				25B795C520AD0DEC00E2A2CA /* SignUpViewModelSpec.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		25B7951D20ACBF1800E2A2CA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				25B7952620ACBF1800E2A2CA /* PasswordManagerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1067,11 +1011,6 @@
 			isa = PBXTargetDependency;
 			target = 25B7950120ACBF1700E2A2CA /* PasswordManager */;
 			targetProxy = 25B7951720ACBF1800E2A2CA /* PBXContainerItemProxy */;
-		};
-		25B7952320ACBF1800E2A2CA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 25B7950120ACBF1700E2A2CA /* PasswordManager */;
-			targetProxy = 25B7952220ACBF1800E2A2CA /* PBXContainerItemProxy */;
 		};
 		25B7956720ACCF6C00E2A2CA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1296,46 +1235,6 @@
 			};
 			name = Release;
 		};
-		25B7953120ACBF1800E2A2CA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68CD98A50F2DECC1C6EB6ECA /* Pods-PasswordManagerUITests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A83VQCEWHR;
-				INFOPLIST_FILE = PasswordManagerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cedro.PasswordManagerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PasswordManager;
-			};
-			name = Debug;
-		};
-		25B7953220ACBF1800E2A2CA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B00254758255895244F3CD4 /* Pods-PasswordManagerUITests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A83VQCEWHR;
-				INFOPLIST_FILE = PasswordManagerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cedro.PasswordManagerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PasswordManager;
-			};
-			name = Release;
-		};
 		25B7954720ACBF2900E2A2CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 137662B49AA5A49E82028616 /* Pods-TestHost.debug.xcconfig */;
@@ -1402,15 +1301,6 @@
 			buildConfigurations = (
 				25B7952E20ACBF1800E2A2CA /* Debug */,
 				25B7952F20ACBF1800E2A2CA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		25B7953020ACBF1800E2A2CA /* Build configuration list for PBXNativeTarget "PasswordManagerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				25B7953120ACBF1800E2A2CA /* Debug */,
-				25B7953220ACBF1800E2A2CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

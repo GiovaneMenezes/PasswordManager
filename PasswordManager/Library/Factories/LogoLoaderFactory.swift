@@ -12,7 +12,7 @@ struct LogoLoaderFactory {
 
     static func create() -> LogoLoader {
         let networkService = ImageNetworkService()
-        return LogoLoader(signInService: networkService)
+        return LogoLoader(imageNetworkService: networkService)
     }
 
 }

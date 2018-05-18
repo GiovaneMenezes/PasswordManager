@@ -53,11 +53,12 @@ struct CredentialsViewModel {
     func onSaveExistingItem(
         _ originalServerName: String,
         _ originalAccountName: String) -> CompletableAction<(String, String, String)> {
-        return Action { newServerName, newAccountName, password in
+        return Action { newServerName, newAccountName, newPassword in
             do {
                 let creator = self.currentUser.email
                 var item = KeychainPasswordItem(server: originalServerName, account: originalAccountName, creator: creator)
                 try item.update(newServerName, newAccountName)
+                try item.savePassword(newPassword)
                 self.loadItems()
             } catch {
                 return Observable.error(error)
@@ -89,7 +90,7 @@ struct CredentialsViewModel {
 
     lazy var editAction: CompletableAction<CredentialType> = { this in
         return CompletableAction { credential in
-            let credentialDetailsViewModel = EditCredentialViewModel(credential: credential, sceneCoordinator: this.sceneCoordinator, saveAction: this.onSaveExistingItem(credential.service, credential.account), deleteAction: this.deleteAction(credential: credential))
+            let credentialDetailsViewModel = EditCredentialViewModel(credential: credential, sceneCoordinator: this.sceneCoordinator, saveAction: this.onSaveExistingItem(credential.server, credential.account), deleteAction: this.deleteAction(credential: credential))
             return this.sceneCoordinator.transition(to: Scene.editCredential(credentialDetailsViewModel), type: .modal)
                 .asObservable()
         }

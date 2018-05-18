@@ -27,8 +27,6 @@ struct EditCredentialViewModel {
     var shouldShowDeleteButton: Driver<Bool>
     let isSaveButtonEnabled: Driver<Bool>
     let shouldShowCopyButton: Driver<Bool>
-    let passwordVisibilityButtonTitle = BehaviorRelay<String>(value: "show")
-    let shouldShowPassword: Driver<Bool>
 
     init(credential: CredentialType?, sceneCoordinator: SceneCoordinatorType, saveAction: CompletableAction<(String, String, String)>, deleteAction: CocoaAction? = nil) {
         self.sceneCoordinator = sceneCoordinator
@@ -36,7 +34,7 @@ struct EditCredentialViewModel {
         self.deleteAction = deleteAction
 
         if let credential = credential {
-            siteUrlInput.onNext(credential.service)
+            siteUrlInput.onNext(credential.server)
             usernameInput.onNext(credential.account)
             passwordInput.onNext(try! credential.readPassword())
             shouldShowDeleteButton = Driver.just(true)
@@ -45,10 +43,6 @@ struct EditCredentialViewModel {
         }
         
         shouldShowCopyButton = shouldShowDeleteButton    
-
-        shouldShowPassword = passwordVisibilityButtonTitle
-            .map { $0 == "show" }
-            .asDriver(onErrorJustReturn: false)
 
         isSaveButtonEnabled = Observable
             .combineLatest(siteUrlInput, usernameInput, passwordInput)

@@ -12,5 +12,5 @@ import RxSwift
 protocol ImageLoaderType {
 
     func loadImage(from url: String) -> Single<UIImage?>
-    init(signInService: ImageNetworkServiceType)
+    init(imageNetworkService: ImageNetworkServiceType)
 }

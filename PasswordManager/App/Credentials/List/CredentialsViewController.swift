@@ -35,9 +35,9 @@ extension CredentialsViewController: BindableType {
         credentials.bind(to: tableView.rx.items(
             cellIdentifier: CredentialTableViewCell.reuseIdentifier,
             cellType: CredentialTableViewCell.self)) { [weak self] row, element, cell in
-                cell.siteUrlLabel.text = element.service
+                cell.siteUrlLabel.text = element.server
                 cell.usernameLabel.text = element.account
-                self?.viewModel.logoLoader.loadImage(from: element.service)
+                self?.viewModel.logoLoader.loadImage(from: element.server)
                     .asDriver(onErrorJustReturn: nil)
                     .drive(cell.siteLogoImageView.rx.image)
                     .disposed(by: cell.disposeBag)

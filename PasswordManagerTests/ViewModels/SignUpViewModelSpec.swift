@@ -95,23 +95,6 @@ class SignUpViewModelSpec: QuickSpec {
                     viewModel.signUpAction.execute(())
                     expect(viewModel.isSignUpButtonEnabled.asObservable()).first == false
                 }
-
-                context("signUp successfully") {
-                    it("should complete action") {
-//                        var completed = false
-//                        let action = viewModel.signUpAction
-//                        action.execute(())
-//                        action.executionObservables.subscribe(onNext: { _ in
-//                            completed = true
-//                        })
-//                        .disposed(by: disposeBag)
-//                        expect(completed).toEventually(beTrue())
-                    }
-                }
-
-                context("signUp return error") {
-
-                }
             }
         }
     }

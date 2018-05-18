@@ -30,7 +30,7 @@ class KeychainServerPasswordItemSpec: QuickSpec {
                 do {
                     try passwordItem.savePassword(password)
                     savedItem = try KeychainPasswordItem
-                        .passwordItems(forCreator: passwordItem.creator, server: passwordItem.service).first
+                        .passwordItems(forCreator: passwordItem.creator, server: passwordItem.server).first
                     savedPassword = try savedItem!.readPassword()
                 } catch {
                     fail("Failed with error: \(error)")
@@ -42,17 +42,17 @@ class KeychainServerPasswordItemSpec: QuickSpec {
             it("should rename server and account") {
 
                 let newAccountName = "theWhite"
-                let newSeverName = "Gondor"
+                let newSeverName = "www.gondor.com"
                 try! passwordItem.savePassword(password)
                 var savedItem: KeychainPasswordItem?
                 do {
                     try passwordItem.update(newSeverName, newAccountName)
                     savedItem = try KeychainPasswordItem
-                        .passwordItems(forCreator: passwordItem.creator, server: passwordItem.service).first
+                        .passwordItems(forCreator: passwordItem.creator, server: passwordItem.server).first
                 } catch {
                     fail("Failed with error: \(error)")
                 }
-                expect(savedItem?.account).to(equal(newAccountName))
+                expect(savedItem).to(equal(passwordItem))
             }
 
             it("should delete saved item") {
@@ -61,7 +61,7 @@ class KeychainServerPasswordItemSpec: QuickSpec {
                 do {
                     try passwordItem.deleteItem()
                     item = try KeychainPasswordItem
-                        .passwordItems(forCreator: passwordItem.creator, server: passwordItem.service).first
+                        .passwordItems(forCreator: passwordItem.creator, server: passwordItem.server).first
                 } catch {
                     fail("Failed with error: \(error)")
                 }
