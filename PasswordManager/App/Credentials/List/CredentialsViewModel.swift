@@ -22,6 +22,7 @@ struct CredentialsViewModel {
 
     // MARK: Output
     var credentials = BehaviorSubject<[CredentialType]>(value: [])
+    let title = "Sites"
 
     // MARK: Properties
     private var currentUser: UserType {
@@ -93,6 +94,16 @@ struct CredentialsViewModel {
                 .asObservable()
         }
     }(self)
+
+    func LogOutAction() -> CocoaAction {
+        return CocoaAction {
+            self.session.removeCurrentUser()
+            let signInViewModel = SignInViewModel(signInCoordinator: SignInCoordinator(signInService: SignInNetworkService()), sceneCoordinator: self.sceneCoordinator)
+            return self.sceneCoordinator.transition(to: Scene.signIn(signInViewModel), type: .rootAnimated)
+                .asObservable()
+                .map { _ in }
+        }
+    }
 
     private func loadItems() {
         let items = try! KeychainPasswordItem.passwordItems(forCreator: session.currentUser!.email)

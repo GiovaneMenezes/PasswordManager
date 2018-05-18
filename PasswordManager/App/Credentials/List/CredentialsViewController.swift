@@ -13,6 +13,7 @@ import RxSwift
 class CredentialsViewController: UITableViewController {
 
     @IBOutlet weak var addCredentialBarButton: UIBarButtonItem!
+    @IBOutlet weak var logOutButton: UIBarButtonItem!
 
     var viewModel: CredentialsViewModel!
 
@@ -26,6 +27,8 @@ class CredentialsViewController: UITableViewController {
 extension CredentialsViewController: BindableType {
 
     func bindViewModel() {
+
+        title = viewModel.title
 
         let credentials = viewModel.credentials
 
@@ -50,7 +53,7 @@ extension CredentialsViewController: BindableType {
             }
             .subscribe(viewModel.editAction.inputs)
             .disposed(by: rx.disposeBag)
-
+        logOutButton.rx.action = viewModel.LogOutAction()
         addCredentialBarButton.rx.action = viewModel.addAction
     }
 }

@@ -19,6 +19,9 @@ class EditCredentialViewController: UITableViewController {
     @IBOutlet weak var deleteCell: UITableViewCell!
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
     @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var copyButton: UIButton!
+    @IBOutlet weak var togglePasswordVisibiltyButton: UIButton!
+
     var viewModel: EditCredentialViewModel!
 
 }
@@ -27,7 +30,17 @@ extension EditCredentialViewController: BindableType {
 
     func bindViewModel() {
 
-        // MARK: Bind inputs
+        viewModel.siteUrlInput.asDriver(onErrorJustReturn: "")
+            .drive(siteUrlTextField.rx.text)
+            .disposed(by: rx.disposeBag)
+
+        viewModel.usernameInput.asDriver(onErrorJustReturn: "")
+            .drive(usernameTextField.rx.text)
+            .disposed(by: rx.disposeBag)
+
+        viewModel.passwordInput.asDriver(onErrorJustReturn: "")
+            .drive(passwordTextField.rx.text)
+            .disposed(by: rx.disposeBag)
 
         siteUrlTextField.rx.text.orEmpty
             .bind(to: viewModel.siteUrlInput)
@@ -44,9 +57,6 @@ extension EditCredentialViewController: BindableType {
         cancelBarButton.rx.action = viewModel.onCancel()
         deleteButton.rx.action = viewModel.deleteAction
 
-        siteUrlTextField.text = viewModel.siteUrl
-        usernameTextField.text = viewModel.username
-        passwordTextField.text = viewModel.password
 
         let inputs = Observable.combineLatest(
             siteUrlTextField.rx.text.orEmpty.asObservable(),
@@ -66,6 +76,25 @@ extension EditCredentialViewController: BindableType {
 
         viewModel.isSaveButtonEnabled
             .drive(saveBarButton.rx.isEnabled)
+            .disposed(by: rx.disposeBag)
+
+        togglePasswordVisibiltyButton.rx.tap.asObservable()
+            .subscribe(onNext: { [unowned self] _ in
+                self.passwordTextField.isSecureTextEntry = !self.passwordTextField.isSecureTextEntry
+                let title = self.passwordTextField.isSecureTextEntry ? "show" : "hide"
+                self.togglePasswordVisibiltyButton.setTitle(title, for: .normal)
+            })
+            .disposed(by: rx.disposeBag)
+
+        copyButton.rx.tap.asObservable()
+            .subscribe(onNext: { [unowned self] _ in
+                UIPasteboard.general.string = self.passwordTextField.text
+            })
+            .disposed(by: rx.disposeBag)
+
+        viewModel.shouldShowCopyButton
+            .map { !$0 }
+            .drive(copyButton.rx.isHidden)
             .disposed(by: rx.disposeBag)
     }
 }

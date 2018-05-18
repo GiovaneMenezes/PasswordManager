@@ -21,14 +21,14 @@ struct EditCredentialViewModel {
     // MARK: Input
     var siteUrlInput = BehaviorSubject<String>(value: "")
     var usernameInput = BehaviorSubject<String>(value: "")
-    var passwordInput = BehaviorSubject<String>(value: "")
+    var passwordInput = BehaviorSubject<String>(value: "") 
 
     // MARK: Output
-    var siteUrl: String = ""
-    var username: String = ""
-    var password: String = ""
     var shouldShowDeleteButton: Driver<Bool>
     let isSaveButtonEnabled: Driver<Bool>
+    let shouldShowCopyButton: Driver<Bool>
+    let passwordVisibilityButtonTitle = BehaviorRelay<String>(value: "show")
+    let shouldShowPassword: Driver<Bool>
 
     init(credential: CredentialType?, sceneCoordinator: SceneCoordinatorType, saveAction: CompletableAction<(String, String, String)>, deleteAction: CocoaAction? = nil) {
         self.sceneCoordinator = sceneCoordinator
@@ -36,15 +36,22 @@ struct EditCredentialViewModel {
         self.deleteAction = deleteAction
 
         if let credential = credential {
-            siteUrl = credential.service
-            username = credential.account
-            password = (try? credential.readPassword()) ?? ""
+            siteUrlInput.onNext(credential.service)
+            usernameInput.onNext(credential.account)
+            passwordInput.onNext(try! credential.readPassword())
             shouldShowDeleteButton = Driver.just(true)
         } else {
             shouldShowDeleteButton = Driver.just(false)
         }
+        
+        shouldShowCopyButton = shouldShowDeleteButton    
 
-        isSaveButtonEnabled = Observable.combineLatest(siteUrlInput, usernameInput, passwordInput)
+        shouldShowPassword = passwordVisibilityButtonTitle
+            .map { $0 == "show" }
+            .asDriver(onErrorJustReturn: false)
+
+        isSaveButtonEnabled = Observable
+            .combineLatest(siteUrlInput, usernameInput, passwordInput)
             .map { !$0.isEmpty && !$1.isEmpty && !$2.isEmpty }
             .asDriver(onErrorJustReturn: false)
     }

@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        try! KeychainPasswordItem.deleteAll()
+
         let sceneCoordinator = SceneCoordinator(window: window!)
         let isLoggedIn = UserDefaults.standard.isLoggedIn
         var firstScene: Scene
