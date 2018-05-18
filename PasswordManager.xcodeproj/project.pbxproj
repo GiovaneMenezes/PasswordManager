@@ -26,6 +26,9 @@
 		252CC42F20AE42AD00A2FB64 /* LogoLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252CC42E20AE42AD00A2FB64 /* LogoLoader.swift */; };
 		252CC43220AE453200A2FB64 /* LogoLoaderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252CC43120AE453200A2FB64 /* LogoLoaderFactory.swift */; };
 		252CC43420AE46F100A2FB64 /* CredentialsViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252CC43320AE46F100A2FB64 /* CredentialsViewModelFactory.swift */; };
+		252CC43720AF067600A2FB64 /* AppLocked.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 252CC43620AF067600A2FB64 /* AppLocked.storyboard */; };
+		252CC43920AF067E00A2FB64 /* AppLockedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252CC43820AF067E00A2FB64 /* AppLockedViewController.swift */; };
+		252CC43B20AF07A800A2FB64 /* AppLockedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252CC43A20AF07A800A2FB64 /* AppLockedViewModel.swift */; };
 		25B7950620ACBF1700E2A2CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B7950520ACBF1700E2A2CA /* AppDelegate.swift */; };
 		25B7950D20ACBF1800E2A2CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25B7950C20ACBF1800E2A2CA /* Assets.xcassets */; };
 		25B7951020ACBF1800E2A2CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B7950E20ACBF1800E2A2CA /* LaunchScreen.storyboard */; };
@@ -138,6 +141,9 @@
 		252CC42E20AE42AD00A2FB64 /* LogoLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoLoader.swift; sourceTree = "<group>"; };
 		252CC43120AE453200A2FB64 /* LogoLoaderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoLoaderFactory.swift; sourceTree = "<group>"; };
 		252CC43320AE46F100A2FB64 /* CredentialsViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsViewModelFactory.swift; sourceTree = "<group>"; };
+		252CC43620AF067600A2FB64 /* AppLocked.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppLocked.storyboard; sourceTree = "<group>"; };
+		252CC43820AF067E00A2FB64 /* AppLockedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLockedViewController.swift; sourceTree = "<group>"; };
+		252CC43A20AF07A800A2FB64 /* AppLockedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLockedViewModel.swift; sourceTree = "<group>"; };
 		25B7950220ACBF1700E2A2CA /* PasswordManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25B7950520ACBF1700E2A2CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25B7950C20ACBF1800E2A2CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -307,6 +313,16 @@
 			path = Factories;
 			sourceTree = "<group>";
 		};
+		252CC43520AF065600A2FB64 /* App Locked */ = {
+			isa = PBXGroup;
+			children = (
+				252CC43620AF067600A2FB64 /* AppLocked.storyboard */,
+				252CC43820AF067E00A2FB64 /* AppLockedViewController.swift */,
+				252CC43A20AF07A800A2FB64 /* AppLockedViewModel.swift */,
+			);
+			path = "App Locked";
+			sourceTree = "<group>";
+		};
 		25B794F920ACBF1700E2A2CA = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +398,7 @@
 				25B7959120ACE21C00E2A2CA /* SignIn */,
 				25B7954C20ACC00E00E2A2CA /* SignUp */,
 				25B7958820ACE1D300E2A2CA /* BiometricAuth */,
+				252CC43520AF065600A2FB64 /* App Locked */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -780,6 +797,7 @@
 				25B7950D20ACBF1800E2A2CA /* Assets.xcassets in Resources */,
 				25B7954E20ACC01A00E2A2CA /* SignUp.storyboard in Resources */,
 				25B7958F20ACE1F500E2A2CA /* BiometricAuth.storyboard in Resources */,
+				252CC43720AF067600A2FB64 /* AppLocked.storyboard in Resources */,
 				25295CED20ADBE3C0022EB8C /* Credentials.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -960,6 +978,7 @@
 				25B795B720ACE89200E2A2CA /* SignUpNetworkService.swift in Sources */,
 				25295D0020ADC0E70022EB8C /* ImageNetworkService.swift in Sources */,
 				25B795B520ACE61200E2A2CA /* SignInData.swift in Sources */,
+				252CC43B20AF07A800A2FB64 /* AppLockedViewModel.swift in Sources */,
 				252CC43220AE453200A2FB64 /* LogoLoaderFactory.swift in Sources */,
 				25295D0A20ADC9530022EB8C /* EditCredentialViewModel.swift in Sources */,
 				252CC42B20AE40AE00A2FB64 /* SignUpNetworkServiceType.swift in Sources */,
@@ -1002,6 +1021,7 @@
 				25B7959F20ACE29000E2A2CA /* UserDefaults+Codable.swift in Sources */,
 				25B7959820ACE22F00E2A2CA /* SignInViewController.swift in Sources */,
 				25B7957920ACDE4400E2A2CA /* SignUpViewController.swift in Sources */,
+				252CC43920AF067E00A2FB64 /* AppLockedViewController.swift in Sources */,
 				252CC42F20AE42AD00A2FB64 /* LogoLoader.swift in Sources */,
 				252CC43420AE46F100A2FB64 /* CredentialsViewModelFactory.swift in Sources */,
 				25B795C120AD05DB00E2A2CA /* UINavigationController+Rx.swift in Sources */,

@@ -18,6 +18,8 @@ protocol SessionType {
     func saveUser(_ user: UserType)
     func removeCurrentUser()
     func setFirstLogin(value: Bool)
+    var isAppLocked: Bool { get }
+    func setAppLocked(value: Bool)
 }
 
 extension SessionType {

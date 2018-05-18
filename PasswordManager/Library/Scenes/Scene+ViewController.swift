@@ -63,6 +63,13 @@ extension Scene {
             var vc = nc.viewControllers.first as! EditCredentialViewController
             vc.bindViewModel(to: viewModel)
             return nc
+
+        case .appLocked(let viewModel):
+            storyboard = UIStoryboard(name: "AppLocked", bundle: nil)
+            let nc = storyboard.instantiateViewController(withIdentifier: "AppLocked") as! UINavigationController
+            var vc = nc.viewControllers.first as! AppLockedViewController
+            vc.bindViewModel(to: viewModel)
+            return nc
         }
     }
 }

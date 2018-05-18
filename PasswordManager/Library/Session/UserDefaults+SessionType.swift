@@ -16,6 +16,7 @@ extension UserDefaults: SessionType {
 
     private enum Keys: String {
         case user
+        case appLocked
     }
 
     var currentUser: UserType? {
@@ -46,6 +47,14 @@ extension UserDefaults: SessionType {
         } else {
             set(true, forKey: email)
         }
+    }
+
+    func setAppLocked(value: Bool) {
+        set(value, forKey: Keys.appLocked.rawValue)
+    }
+
+    var isAppLocked: Bool {
+        return bool(forKey: Keys.appLocked.rawValue)
     }
     
 
